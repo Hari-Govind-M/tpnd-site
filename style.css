@@ -1,19 +1,21 @@
+/* style.css */
+
 /****************************************************
  * Root Variables (colors, fonts, etc.)
  ****************************************************/
 :root {
-  --primary-color: #2d5be3;     /* used for lines, dots, highlights */
-  --secondary-color: #959da5;   /* optional accent color */
-  --bg-color: #ffffff;          /* general page background */
-  --text-color: #333333;        /* main text color */
-  --light-bg: #f6f8fa;          /* backgrounds for boxes, steps, sidebars */
-  --dark-bg: #262626;           /* used in dark theme */
-  --dark-text: #efefef;         /* text color in dark theme */
+  --primary-color: #2d5be3;
+  --secondary-color: #959da5;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --light-bg: #f6f8fa;
+  --dark-bg: #262626;
+  --dark-text: #efefef;
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /****************************************************
- * Dark Theme Toggling (if you use body.dark-theme)
+ * Dark Theme Toggling (if used)
  ****************************************************/
 body.dark-theme {
   --bg-color: var(--dark-bg);
@@ -75,7 +77,7 @@ a:hover {
 }
 
 /****************************************************
- * Sidebar
+ * Sidebar (if used on other pages)
  ****************************************************/
 .sidebar {
   position: fixed;
@@ -116,7 +118,7 @@ a:hover {
 }
 
 /****************************************************
- * Top-right container (theme toggle, PTC link)
+ * Top-right container (theme + PTC link) 
  ****************************************************/
 .top-right-container {
   position: fixed;
@@ -138,7 +140,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.2s ease;
 }
 .toggle-theme:hover {
   background-color: #e5e5e5;
@@ -196,10 +197,10 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Main Wrapper & Content
+ * Main Wrapper & Content (for typical pages)
  ****************************************************/
 .main-wrapper {
-  margin-left: 200px; /* space for sidebar */
+  margin-left: 200px;
   min-height: 100vh;
   padding: 0 2rem;
 }
@@ -254,7 +255,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Sections & Fade-in Animations
+ * Section & Fade-in Animations
  ****************************************************/
 .section {
   margin-bottom: 3rem;
@@ -297,7 +298,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Two-by-two Table (Plan-Build-Sell-Grow, etc.)
+ * 2x2 Tables (Plan-Build-Sell-Grow, etc.)
  ****************************************************/
 .two-by-two td {
   vertical-align: top;
@@ -305,7 +306,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * "How to Submit" Diagram (Services Request, etc.)
+ * "How to Submit" Diagram
  ****************************************************/
 .diagram-container {
   display: flex;
@@ -373,8 +374,9 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * MY-DAY-AS-A-PTC PAGE: Namespaced Diagram Flow
- * (Ensures no conflict with existing .diagram-container usage)
+ * MY-DAY-AS-A-PTC PAGE: 
+ * Namespaced diagram flow so it doesn't clash with existing
+ * .diagram-container or .diagram-step from other pages
  ****************************************************/
 .my-day-ptc {
   max-width: 800px;
@@ -387,7 +389,6 @@ body.dark-theme .toggle-theme svg circle {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .my-day-ptc .ptc-step {
@@ -401,7 +402,7 @@ body.dark-theme .toggle-theme svg circle {
   color: var(--text-color);
 }
 
-/* Dot at the start of each step */
+/* The dot at the start of each step */
 .my-day-ptc .ptc-step::before {
   content: "";
   position: absolute;
@@ -413,7 +414,7 @@ body.dark-theme .toggle-theme svg circle {
   border-radius: 50%;
 }
 
-/* Vertical line connecting steps except the first */
+/* The vertical line connecting steps (except the first) */
 .my-day-ptc .ptc-step:not(:first-child)::after {
   content: "";
   position: absolute;
@@ -425,7 +426,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Responsive Adjustments
+ * Mobile Adjustments
  ****************************************************/
 @media (max-width: 768px) {
   .sidebar {
