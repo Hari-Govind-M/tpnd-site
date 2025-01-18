@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Technical Presales and Deployment (TPnD) - All in One</title>
+  <title>Technical Presales and Deployment - Single Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Fixed left sidebar for Solution Areas -->
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Fixed Left Sidebar (6 solution areas) -->
   <aside class="sidebar">
     <h2>Solution Areas</h2>
     <ul class="solution-areas">
-      <li><a href="#">Azure Infrastructure</a></li>
-      <li><a href="#">Data &amp; AI</a></li>
-      <li><a href="#">Digital &amp; App Innovation</a></li>
-      <li><a href="#">Modern Work</a></li>
-      <li><a href="#">Business Apps</a></li>
-      <li><a href="#">Security</a></li>
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
     </ul>
   </aside>
 
-  <!-- Top-right box: Theme toggle + "How my day as a PTC looks" -->
+  <!-- Top-right container: Theme toggle & PTC day link -->
   <div class="top-right-container">
     <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
       <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
@@ -30,219 +34,414 @@
     </div>
   </div>
 
-  <!-- Main wrapper (offset for sidebar) -->
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
   <div class="main-wrapper">
-    <!-- Single-page content container (centered) -->
     <main class="main-content">
-      
+
       <!-- HERO SECTION -->
-      <section class="hero">
-        <h1>Technical Presales and Deployment</h1>
-        <p>Your One-Stop Partner for Success in an AI-driven, cloud-first world.</p>
-        <a href="https://learn.microsoft.com/en-us/partner-center/benefits/technical-benefits" 
-           class="cta-button" 
-           target="_blank"
-           rel="noopener noreferrer">
-          Learn More
-        </a>
+      <section class="hero fade-in-up" id="hero">
+        <div class="hero-overlay">
+          <h1>Technical Presales and Deployment</h1>
+          <p>Your One-Stop Partner for Success in an AI-driven, cloud-first world.</p>
+          <a href="https://learn.microsoft.com/en-us/partner-center/benefits/technical-benefits" 
+             class="cta-button" 
+             target="_blank"
+             rel="noopener noreferrer">
+            Learn More
+          </a>
+        </div>
       </section>
 
       <!-- WHY TPND MATTERS -->
-      <section class="section">
+      <section class="section fade-in-up" id="tpnd-matters">
         <h2>Why TPnD Matters</h2>
         <p>
-          In today’s <strong>AI-driven, cloud-first</strong> world, you need more than just product 
-          access. You need <em>strategic guidance</em> and a dedicated advisor who can help you 
-          navigate complex technical presales, solution design, and rapid deployment. That’s where 
-          <strong>Technical Presales and Deployment (TPnD)</strong> shines.
+          In today’s AI-driven, cloud-first world, simply having access to Microsoft products and platforms isn’t enough to stay competitive. You need strategic guidance, hands-on expertise, and a dedicated advisor to help you navigate complexities in presales, solution design, and rapid deployment. That’s where Technical Presales and Deployment (TPnD) comes in.
         </p>
         <p>
-          TPnD is a global Microsoft organization that empowers partners with the resources, 
-          knowledge, and tools to <strong>plan</strong>, <strong>build</strong>, 
-          <strong>sell</strong>, and <strong>grow</strong> cutting-edge solutions. Whether it’s 
-          modernizing data centers, integrating AI and analytics, or enabling secure remote work, 
-          we partner with you every step of the way to accelerate your journey.
+          TPnD is a global Microsoft organization that empowers Microsoft Partners with the resources, knowledge, and tools to plan, build, sell, and grow high-value solutions. Whether you’re brand new to Azure, Microsoft 365, or Dynamics 365, or you’re looking to integrate advanced AI or IoT workloads, our Partner Technical Consultants (PTCs) are ready to support your journey from end to end.
         </p>
       </section>
 
-      <!-- ABOUT US -->
-      <section class="section">
-        <h2>About Us</h2>
+      <!-- WHO WE ARE AND WHAT WE DO -->
+      <section class="section fade-in-up">
+        <h2>Who We Are and What We Do</h2>
+        
         <h3>Our Mission</h3>
-        <ul>
-          <li><strong>Empower Partners</strong>: We help you win deals, deliver impactful deployments, and stand out in a competitive market.</li>
-          <li><strong>Accelerate Time-to-Market</strong>: We shorten project timelines with AI-driven best practices.</li>
-          <li><strong>Enable Ongoing Innovation</strong>: We emphasize knowledge transfer, so you can continually innovate.</li>
-        </ul>
         <p>
-          Our <strong>Partner Technical Consultants (PTCs)</strong> have deep expertise in Azure, Microsoft 365, 
-          Dynamics 365, the Power Platform, AI, and more. Think of us as your trusted advisors, 
-          guiding you through solution architecture, proofs of concept, deployment best practices, 
-          and post-deployment optimization.
+          <strong>Empower Partners</strong><br/>
+          Equip you with the capabilities to win deals, deliver impactful deployments, and stand out in a dynamic market.
         </p>
+        <p>
+          <strong>Accelerate Time-to-Market</strong><br/>
+          Provide hands-on guidance and best practices to reduce risk, streamline complex projects, and expedite go-live milestones—especially critical for emerging AI scenarios.
+        </p>
+        <p>
+          <strong>Enable Ongoing Innovation</strong><br/>
+          Emphasize knowledge transfer so you can continually innovate, modernize legacy systems, and drive productivity across cloud, hybrid, or remote environments.
+        </p>
+
+        <h3>The Role of Partner Technical Consultants (PTCs)</h3>
+        <!-- 2x2 table -->
+        <div class="table-container">
+          <table class="simple-table two-by-two">
+            <tr>
+              <td>
+                <strong>Technical Presales</strong><br/>
+                Develop solution demos—highlighting AI, analytics, and cloud benefits—to resonate with customer needs and address common objections.
+              </td>
+              <td>
+                <strong>Solution Architecture</strong><br/>
+                Assess existing environments, propose target architectures, and guide you through proofs-of-concept for cloud migrations, AI enhancements, or app modernization.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Deployment Assistance</strong><br/>
+                Share best practices for initial setup, networking, security, and performance, ensuring your production rollout is stable, compliant, and scalable.
+              </td>
+              <td>
+                <strong>Post-Deployment Optimization</strong><br/>
+                Offer insights on performance tuning, security hardening, compliance, and next-generation innovations—such as advanced analytics, machine learning, or cognitive services.
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
 
-      <!-- CONSOLIDATED CONTENT: PLAN, BUILD, SELL, GROW -->
-      <section class="section">
-        <h2>Plan</h2>
-        <p>
-          The <em>Plan</em> phase focuses on discovery, assessment, and establishing a 
-          high-level roadmap. We examine your environment—on-premises, cloud, or hybrid—to identify 
-          technical gaps and AI opportunities. Together, we determine whether to rehost, refactor, 
-          or rearchitect workloads, aligning your technical path with business objectives.
-        </p>
-        <p>
-          Example: A mid-sized ISV wants to migrate a legacy .NET application to Azure while 
-          integrating AI. After evaluating on-prem VMs and databases, we outline a plan to 
-          containerize certain components, incorporate <strong>Azure Cognitive Services</strong> 
-          for new AI-driven features, and set up a phased deployment roadmap.
-        </p>
+      <!-- (Optional) placeholders for solution anchors, if needed -->
+      <section id="infrastructure" style="display:none;"></section>
+      <section id="data-ai" style="display:none;"></section>
+      <section id="digital-app" style="display:none;"></section>
+      <section id="security" style="display:none;"></section>
+      <section id="modern-work" style="display:none;"></section>
+      <section id="business-apps" style="display:none;"></section>
+
+      <!-- SIX CORE SOLUTION AREAS (3x2 table) -->
+      <section class="section fade-in-up" id="solution-areas">
+        <h2>The Six Core Solution Areas</h2>
+        <p>TPnD engagements span all major Microsoft solution domains, enabling you to tackle projects of any scale or scope:</p>
+
+        <div class="table-container">
+          <table class="simple-table solution-areas-3x2">
+            <tr>
+              <td>
+                <strong>Azure Infrastructure</strong><br/>
+                Modernize legacy servers, enable hybrid scenarios, and deploy container solutions (e.g., Azure Kubernetes Service).<br/>
+                Implement Azure-native monitoring and governance (Azure Monitor, Azure Policy).
+              </td>
+              <td>
+                <strong>Data &amp; AI (Azure)</strong><br/>
+                Modernize data platforms with Azure SQL, Azure Synapse, or Data Lake.<br/>
+                Implement advanced analytics, machine learning, or cognitive services for intelligent applications.
+              </td>
+              <td>
+                <strong>Digital &amp; App Innovation (Azure)</strong><br/>
+                Develop cloud-native apps using microservices, serverless architectures, and DevOps.<br/>
+                Enrich solutions with AI capabilities and publish to the Microsoft commercial marketplace.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Security</strong><br/>
+                Protect identities, endpoints, and data with Microsoft Entra (Azure AD), Microsoft Defender, and Zero Trust architecture.<br/>
+                Utilize Microsoft Sentinel for AI-assisted threat detection and automated response.
+              </td>
+              <td>
+                <strong>Modern Work</strong><br/>
+                Deploy Microsoft 365, Teams, SharePoint, and AI-driven tools like Microsoft 365 Copilot to enhance collaboration.<br/>
+                Establish governance, compliance, and user adoption best practices.
+              </td>
+              <td>
+                <strong>Business Applications</strong><br/>
+                Elevate customer engagement with Dynamics 365 (Sales, Customer Service, Marketing) and the Power Platform.<br/>
+                Embed AI for predictive insights and personalized experiences (e.g., Microsoft Sales Copilot).
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
 
-      <section class="section">
-        <h2>Build</h2>
-        <p>
-          In the <em>Build</em> phase, our PTCs collaborate with you on 
-          <strong>technical architecture &amp; deployment</strong>. We ensure best practices 
-          around networking, security, identity, and data storage are followed, while guiding 
-          you through proofs of concept to validate performance and AI scenarios. 
-        </p>
-        <p>
-          Example: You modernize a data platform with <strong>Azure Synapse Analytics</strong>, 
-          <strong>Data Lake</strong>, and <strong>Power BI</strong> for real-time insights. 
-          A quick proof-of-concept on historical data paves the way for advanced ML-based 
-          forecasting, significantly reducing time-to-market for your analytics solutions.
-        </p>
+      <!-- OUR ENGAGEMENT MODEL (Plan-Build-Sell-Grow) in 2x2 -->
+      <section class="section fade-in-up" id="engagement-model">
+        <h2>Our Engagement Model: Plan – Build – Sell – Grow</h2>
+        <p>We tailor each engagement according to your needs, following a four-phase approach:</p>
+
+        <div class="table-container">
+          <table class="simple-table two-by-two">
+            <tr>
+              <td>
+                <h3>1. Plan</h3>
+                <p><strong>Discovery &amp; Assessment</strong><br/>
+                Evaluate your current environment—on-prem, cloud, or hybrid—to identify technical gaps and AI opportunities.</p>
+                <p><strong>High-Level Architecture</strong><br/>
+                Determine the best approach (rehost, refactor, rearchitect, or greenfield) and align solution areas (infrastructure, data, AI) with your business goals.</p>
+                <p><strong>Roadmap</strong><br/>
+                Create a clear project roadmap so all stakeholders understand the project scope, timeline, and desired outcomes.</p>
+                <p><strong>Example</strong><br/>
+                A mid-sized ISV wants to migrate a legacy .NET app to Azure while integrating AI. After assessing on-prem VMs and databases, we outline a plan to rehost certain components and refactor others for containers, detailing how Azure Cognitive Services can enhance the user experience.</p>
+              </td>
+              <td>
+                <h3>2. Build</h3>
+                <p><strong>Technical Architecture &amp; Deployment</strong><br/>
+                Our PTCs guide best practices around networking, security, identity, and data—ensuring a future-proof environment.</p>
+                <p><strong>Proof-of-Concept &amp; Pilot</strong><br/>
+                Validate key workloads, AI prototypes, or performance metrics in a controlled environment before scaling up.</p>
+                <p><strong>Knowledge Transfer</strong><br/>
+                We coach your teams on resource management, DevOps processes, and monitoring so you’re self-sufficient after the engagement.</p>
+                <p><strong>Example</strong><br/>
+                You modernize a data analytics platform with Azure Synapse, Data Lake, and Power BI. A small proof-of-concept with historical sales data paves the way for full-scale AI-driven forecasting.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>3. Sell</h3>
+                <p><strong>Technical Presales Demos</strong><br/>
+                Showcase real-world scenarios—like AI-based image recognition—that directly address your customers’ business challenges.</p>
+                <p><strong>Competitive Positioning &amp; Objection Handling</strong><br/>
+                Leverage our deep Microsoft expertise to counter concerns about solution complexity or cost.</p>
+                <p><strong>ROI/TCO Analysis</strong><br/>
+                Develop robust, data-driven business cases to illustrate the benefits of cloud transformation, AI adoption, or workload consolidation.</p>
+                <p><strong>Example</strong><br/>
+                A partner competes to deploy Microsoft 365 for a global manufacturing client. We help create a Teams + Microsoft 365 Copilot demo that emphasizes streamlined workflow, AI-assisted productivity, and reduced IT overhead.</p>
+              </td>
+              <td>
+                <h3>4. Grow</h3>
+                <p><strong>Post-Deployment Optimization</strong><br/>
+                Adopt continuous best practices for performance, scalability, governance, and compliance—crucial for expanding AI workloads.</p>
+                <p><strong>Advanced Feature Adoption</strong><br/>
+                Explore additional services (machine learning, data analytics, IoT) to drive ongoing innovation and revenue growth.</p>
+                <p><strong>Co-Sell &amp; Marketplace Alignment</strong><br/>
+                If you’re a Microsoft partner, we can help align your solution for co-sell and commercial marketplace exposure.</p>
+                <p><strong>Example</strong><br/>
+                After migrating to Azure, a retailer wants to integrate IoT sensors for predictive maintenance. We help with Azure Stream Analytics and Azure Machine Learning for real-time anomaly detection, turning initial success into a broader advanced solution offering.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
 
-      <section class="section">
-        <h2>Sell</h2>
-        <p>
-          The <em>Sell</em> phase focuses on <strong>technical presales</strong>, helping you 
-          create effective demos, handle objections, and develop solid ROI/TCO arguments for 
-          customers. We can co-create scenario-based demonstrations—integrating AI, cloud-native 
-          services, or line-of-business apps—to show how Microsoft solutions address real-world 
-          customer challenges.
-        </p>
-        <p>
-          Example: A partner competes to deploy Microsoft 365 for a global manufacturing client. 
-          We build a custom <strong>Teams + Microsoft 365 Copilot</strong> demo that 
-          highlights collaboration, AI-assisted insights, and reduced IT complexity. 
-          This ensures the partner can confidently articulate the business value, winning the deal.
-        </p>
+      <!-- UNDERSTANDING ELIGIBILITY & BENEFITS -->
+      <section class="section fade-in-up" id="eligibility-benefits">
+        <h2>Understanding Eligibility &amp; Benefits</h2>
+        <p>TPnD benefits are available to Microsoft partners in the Microsoft AI Cloud Partner Program, including Solutions Partner designation, Partner Success Core or Expanded benefits, Legacy Gold/Silver status, and Microsoft Action Pack (MAPS).</p>
+        <p>Note: Partners not holding one of the designations above are generally ineligible for TPnD services. In scenarios where a customer or non-eligible reseller joins the same call, the eligible partner must still be the primary beneficiary of the service.</p>
+
+        <h3>Available Advisory Hours</h3>
+        <p>Depending on your membership or designation, you receive a certain number of Partner Advisory Hours—or, in some cases, have unlimited technical presales support. Check your benefits in Partner Center.</p>
+        
+        <div class="table-container">
+          <table class="simple-table">
+            <thead>
+              <tr>
+                <th>Offer Type</th>
+                <th>Advisory Hours</th>
+                <th>Technical Presales Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Partner Success Expanded</td>
+                <td>10</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Partner Success Core</td>
+                <td>5</td>
+                <td>Deducts from hours</td>
+              </tr>
+              <tr>
+                <td>Partner Launch</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Solutions Partner designation</td>
+                <td>50</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Legacy Gold</td>
+                <td>50</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Legacy Silver</td>
+                <td>20</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Action Pack (MAPS)</td>
+                <td>5</td>
+                <td>Deducts from hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section class="section">
-        <h2>Grow</h2>
-        <p>
-          After success in the field, the <em>Grow</em> phase is about continuous improvement and 
-          expansion. We help you identify additional workloads—like <strong>IoT integration</strong>, 
-          <strong>machine learning pipelines</strong>, or <strong>co-sell opportunities</strong>—to 
-          further enhance your solution portfolio and deepen customer relationships.
-        </p>
-        <p>
-          Example: A retailer successfully migrates to Azure and wants to incorporate IoT sensors 
-          for predictive maintenance. We guide the integration of 
-          <strong>Azure Stream Analytics</strong> and <strong>Azure Machine Learning</strong>, 
-          delivering real-time anomaly detection. This new offering grows revenue streams while 
-          cementing the retailer’s trust in your services.
-        </p>
+      <!-- NEW SECTION: Additional Guidance -->
+      <section class="section fade-in-up">
+        <h2>Additional Guidance</h2>
+
+        <h3>Partner Technical Consultant engagement boundaries</h3>
+        <p>Find the right support for your needs.</p>
+        <div class="table-container">
+          <table class="simple-table">
+            <thead>
+              <tr>
+                <th>Unsupported scenarios</th>
+                <th>Examples</th>
+                <th>Where to get support</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Technical support</td>
+                <td>Break-fix support, hotfixes or troubleshooting</td>
+                <td>Use Signature Cloud Support or product support incidents</td>
+              </tr>
+              <tr>
+                <td>Account management</td>
+                <td>Partner development, sales pipeline planning</td>
+                <td>Contact Partner Development Managers or Partner Success Account Manager (ASfP)</td>
+              </tr>
+              <tr>
+                <td>Microsoft AI Cloud Partner Program or CSP support</td>
+                <td>Microsoft AI Cloud Partner Program questions (credential association to the partner organization, support contract activation, membership, benefits)</td>
+                <td>Contact partner frontline support</td>
+              </tr>
+              <tr>
+                <td>On-site support</td>
+                <td>Going on-site to partner or customer locations</td>
+                <td>Review partner support offerings</td>
+              </tr>
+              <tr>
+                <td>Long-term consulting</td>
+                <td>Partners using more than 25 partner advisory hours for single engagement are usually considered out of scope</td>
+                <td>Review partner support offerings</td>
+              </tr>
+              <tr>
+                <td>Pricing/licensing questions or contracts</td>
+                <td>Prices that are not public, reseller price list, discounts or contract issues</td>
+                <td>View commercial licensing and contact Microsoft Operations</td>
+              </tr>
+              <tr>
+                <td>Direct support to end customers</td>
+                <td>Discussions with the end customer for technical presales &amp; deployment scenarios (Partner owns customer relationship)</td>
+                <td>Review partner support offerings</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- REVISED: Technical consultations (TC) defined -->
+<h3>Technical consultations (TC) defined</h3>
+<div class="table-container">
+  <table class="simple-table two-by-two">
+    <tr>
+      <td>
+        <strong>What a TC is</strong><br/><br/>
+        A <em>Technical Consultation (TC)</em> is a remote advisory engagement designed to help 
+        you <strong>plan, build, and grow</strong> your partner technical capabilities. Think 
+        of it as a focused, time-bound consultation that provides <strong>targeted resources</strong>, 
+        best practices, and recommended architectures—always centered on common partner questions 
+        and technical scenarios. TCs help you explore new solution approaches, validate architecture 
+        choices, and equip your teams for success. They’re part of the 
+        <strong>Microsoft AI Cloud Partner Program</strong> advisory benefits, enabling 
+        knowledge transfer that enhances your competencies without replacing formal training 
+        or support engagements.
+      </td>
+      <td>
+        <strong>What a TC is not</strong><br/><br/>
+        A TC isn’t a <em>Microsoft sign-off</em> or any sort of formal <strong>approval</strong> 
+        of a proposed solution. It also doesn’t provide <strong>hands-on deployment</strong> 
+        for production or cover break-fix scenarios. If you’re seeking direct troubleshooting, 
+        bug resolution, or a <em>training workshop</em>, a TC isn’t meant to replace 
+        those services. Instead, it’s an <strong>enablement-focused consultation</strong> 
+        that gives you strategic guidance and best practices—leaving day-to-day production 
+        support, break-fix, and training to other appropriate channels or engagements.
+      </td>
+    </tr>
+  </table>
+</div>
+
       </section>
 
-      <!-- ELIGIBILITY & BENEFITS -->
-      <section class="section">
-        <h2>Eligibility & Benefits</h2>
+      <!-- HOW TO SUBMIT A TPND SERVICES REQUEST -->
+      <section class="section fade-in-up">
+        <h2>How to Submit a TPnD Services Request</h2>
         <p>
-          TPnD benefits are available to Microsoft partners in the 
-          <strong>Microsoft AI Cloud Partner Program</strong>, including Solutions Partner 
-          designations, Legacy Gold/Silver status, and Action Pack. If you’re eligible, you 
-          can leverage <em>Partner Advisory Hours</em> in <strong>Partner Center</strong> 
-          for these services.
+          Sign in to Partner Center and ensure your organization is enrolled in the Microsoft AI Cloud Partner Program (Solutions Partner, Legacy Gold/Silver, Action Pack, etc.). 
+          Select “Benefits,” then choose Technical Presales &amp; Deployment (TPnD). Pick your Advisory Hours benefit (if you have multiple, select the right bucket), then create a case by providing a title, description, relevant product area (Azure, Microsoft 365, Dynamics 365, etc.), and your full international dial code with preferred working hours. Once you submit, you’ll receive a confirmation page and email with your case number.
         </p>
-        <p>
-          Unsure of your status? Check your advisory hours allotment in Partner Center. 
-          If you see “Looks like you don’t have any benefits yet,” confirm you’re signed in 
-          with the correct account or verify your membership status.
+        <p><strong>Important</strong><br/>
+          If your account is only associated with a reseller/CSP program and not with the Microsoft AI Cloud Partner Program, you may see an error indicating insufficient permissions.<br/>
+          If you have no active membership offers, the page will read “Looks like you don’t have any benefits yet.” Confirm you’ve signed in with the correct account.
         </p>
+
+        <div class="diagram-container">
+          <div class="diagram-step">1. Sign in</div>
+          <span class="diagram-arrow">&rarr;</span>
+          <div class="diagram-step">2. Benefits</div>
+          <span class="diagram-arrow">&rarr;</span>
+          <div class="diagram-step">3. Pick Hours</div>
+          <span class="diagram-arrow">&rarr;</span>
+          <div class="diagram-step">4. Create Case</div>
+          <span class="diagram-arrow">&rarr;</span>
+          <div class="diagram-step">5. Confirm</div>
+        </div>
       </section>
 
-      <!-- EXTENDED CONTENT: Real-World Use Cases (Optional) -->
-      <section class="section">
-        <h2>Real-World Use Cases</h2>
-        <article>
-          <h3>Financial Services & AI Implementation</h3>
-          <p>
-            A financial-services ISV wanted to add <em>real-time fraud detection</em> to their 
-            existing platform. We collaborated to design a pipeline using 
-            <strong>Azure Machine Learning</strong>, <strong>Azure Functions</strong>, and 
-            <strong>Event Hubs</strong> for ingesting massive data. The proof-of-concept 
-            reduced fraud by 25% in six months, solidifying the partner’s reputation for 
-            secure, innovative solutions.
-          </p>
-        </article>
-        <article>
-          <h3>Global Manufacturer’s Cloud Migration</h3>
-          <p>
-            A manufacturer with 400+ VMs on-prem wanted a smooth transition to Azure. We provided 
-            a phased migration plan, best practices for hybrid governance, and 
-            <strong>Azure Migrate</strong> tooling demos. The result was a 30% reduction in 
-            operational costs and higher system reliability—laying the groundwork for AI-driven 
-            predictive maintenance later on.
-          </p>
-        </article>
-      </section>
-
-      <!-- FAQ AT THE BOTTOM -->
-      <section class="section" id="faq">
+      <!-- FAQ -->
+      <section class="section fade-in-up" id="faq">
         <h2>Frequently Asked Questions (FAQ)</h2>
-
         <div class="faq-item">
-          <h3>1. Am I eligible for TPnD services?</h3>
-          <p>
-            If you’re part of the <strong>Microsoft AI Cloud Partner Program</strong> with a 
-            Solutions Partner, Legacy Gold/Silver, or Action Pack designation, you likely have 
-            TPnD benefits. Check Partner Center to confirm.
-          </p>
+          <button class="faq-question">Q: Am I eligible for TPnD services?</button>
+          <div class="faq-answer">
+            <p>A: If you’re part of the Microsoft AI Cloud Partner Program (including Solutions Partner designations, Legacy Gold/Silver status, or Action Pack), you typically have TPnD benefits. Check Partner Center for your specific allotment of advisory hours.</p>
+          </div>
         </div>
+        <!-- Add additional FAQ items as needed -->
+      </section>
 
-        <div class="faq-item">
-          <h3>2. How long do TPnD engagements last?</h3>
-          <p>
-            It depends on your scenario. We aim for short, high-impact engagements—anywhere from 
-            a few days to a few weeks—to address key technical blockers or presales demos.
-          </p>
-        </div>
+      <!-- CONCLUSION -->
+      <section class="section fade-in-up">
+        <h2>Conclusion: Partner with TPnD for an AI-Enabled Future</h2>
+        <p>
+          Technical Presales and Deployment (TPnD) brings together technical mastery and strategic insight, acting as your trusted ally for planning, building, selling, and growing within the Microsoft Cloud. Whether modernizing infrastructure, rolling out AI-driven applications, enhancing security postures, or empowering a global workforce, our Partner Technical Consultants (PTCs) help you unlock the full power of Microsoft technologies—so you can innovate, optimize, and thrive.
+        </p>
+      </section>
 
-        <div class="faq-item">
-          <h3>3. Is TPnD the same as Microsoft Support?</h3>
-          <p>
-            No. TPnD focuses on <em>strategic enablement</em>—e.g., architecture guidance and 
-            short-term deployment assistance—while Microsoft Support handles break-fix incidents.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>4. Does TPnD offer custom code development?</h3>
-          <p>
-            We provide <em>guidance</em> on best practices, DevOps, and AI/ML integrations. 
-            We do not write or maintain proprietary code for you.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>5. How do I submit a TPnD Services Request?</h3>
-          <p>
-            In <strong>Partner Center</strong>, go to <em>Benefits</em> &gt; 
-            <em>Technical Presales &amp; Deployment</em> and choose your advisory hours benefit. 
-            Fill out the form describing your scenario, and we’ll reach out within two business days.
-          </p>
-        </div>
+      <!-- NEXT STEPS -->
+      <section class="section fade-in-up">
+        <h2>Next Steps</h2>
+        <p><strong>Check Your Partner Benefits</strong><br/>
+        Sign in to Partner Center to confirm your membership and advisory hours.</p>
+        
+        <p><strong>Submit a TPnD Services Request</strong><br/>
+        Provide detailed project goals and requirements to get started.</p>
+        
+        <p><strong>Schedule a Consultation</strong><br/>
+        Discuss your roadmap—cloud migrations, AI, or app modernization—with a PTC.</p>
+        
+        <p><strong>Engage &amp; Execute</strong><br/>
+        Launch your Plan-Build-Sell-Grow journey, leveraging high-impact guidance.</p>
+        
+        <p><strong>Grow Your Practice</strong><br/>
+        Explore advanced workloads—AI, secure collaboration, IoT, or business applications—and deliver higher-value solutions to your customers.</p>
+        
+        <p style="margin-top:1.5rem;">
+          Start your TPnD journey today and shape an AI-enabled future where you stay competitive, provide transformative customer experiences, and scale your business for success in the modern era.
+        </p>
       </section>
 
     </main>
   </div>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
   </footer>
