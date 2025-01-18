@@ -9,10 +9,29 @@
 </head>
 <body>
 
-  <!-- Optional if you have a scroll progress bar or other scripts -->
-  <div id="scrollProgress"></div>
+  <!-- Fixed Top Bar: Home button (left) & Theme Toggle (right) -->
+  <header class="ptc-page-header">
+    <div class="ptc-header-left">
+      <!-- Home link back to index.html -->
+      <a href="index.html" class="ptc-home-link">
+        <!-- A simple home icon -->
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+    <div class="ptc-header-right">
+      <!-- Theme Toggle Button (assumes script toggles body.dark-theme) -->
+      <div class="toggle-theme" id="toggleTheme" title="Toggle Theme">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+        </svg>
+      </div>
+    </div>
+  </header>
 
-  <!-- Main content container -->
+  <!-- Main container for the Day-in-the-Life content -->
   <div class="my-day-ptc">
     <!-- Main Title -->
     <h1 style="text-align:center; margin-bottom:2rem;">
@@ -21,88 +40,89 @@
 
     <!-- Diagram Container for Steps -->
     <div class="ptc-step-container">
-      <!-- Step 1 -->
+      
+      <!-- STEP 1 -->
       <div class="ptc-step">
         <p>
           The first few minutes of my workday set the tone for everything. Rather than diving into a crowded inbox, I begin by checking our operational boards. This dashboard reveals my top priorities: new partner consultations, critical follow-ups, performance metrics, and any pending operational items. It helps me prepare mentally for the variety of requests—ranging from NetApp tenant migrations to advanced AI integrations—that might appear in my queue.
         </p>
       </div>
-      <!-- Step 2 -->
+      <!-- STEP 2 -->
       <div class="ptc-step">
         <p>
-          After gaining a high-level view, I review emails to finalize plans. I immediately see two critical items: a partner needs guidance on migrating NetApp Files from one tenant to another, and a colleague on the Modern Work team has requested my input on Azure Copilot scenarios for a partner already proficient with Microsoft 365 Copilot. I send concise emails to confirm meeting times for the NetApp Files migration session and an Azure Copilot alignment call, ensuring I'm well-prepared with relevant architectural best practices.
+          After gaining a high-level view, I review emails to finalize plans. I immediately see two critical items: a partner needs guidance on migrating NetApp Files from one tenant to another, and a colleague on the Modern Work team has requested my input on Azure Copilot scenarios for a partner already proficient with Microsoft 365 Copilot. I send concise emails to confirm meeting times for the NetApp Files migration session and an Azure Copilot alignment call, ensuring I’m well-prepared with relevant architectural best practices.
         </p>
       </div>
-      <!-- Step 3 -->
+      <!-- STEP 3 -->
       <div class="ptc-step">
         <p>
-          During my consultation with the partner, they outline challenges around NetApp Files migration. We discuss best practices, referencing Azure documentation, and confirm key prerequisites like network connectivity and identity configurations. By the end, we have not only clarified the NetApp Files plan but also uncovered a security enhancement opportunity involving Microsoft Sentinel. I note their interest and schedule a follow-up session with our Security PTC.
+          During my consultation with the partner, they outline challenges around NetApp Files migration. We discuss best practices, referencing Azure documentation, and confirm key prerequisites like network connectivity and identity configurations. By the end, we have not only clarified the NetApp Files plan but also uncovered a security enhancement opportunity involving Microsoft Sentinel. I note their interest and schedule a follow-up enablement session with our Security PTC.
         </p>
       </div>
-      <!-- Step 4 -->
+      <!-- STEP 4 -->
       <div class="ptc-step">
         <p>
-          Shortly afterward, I join a call with a Modern Work colleague and a partner who’s already excelling with Microsoft 365 Copilot. They now want to embed Azure Copilot features into their workflow for advanced analytics. We discuss potential synergy between their existing usage of Copilot in Microsoft 365 and Azure-based AI services, governance considerations, and key factors for a smooth staged rollout. The partner is enthusiastic about combining Copilot’s AI-driven assistance with robust Azure services. We schedule a follow-up for deeper solution architecture mapping.
+          Shortly afterward, I join a call with a Modern Work colleague and a partner who’s already excelling with Microsoft 365 Copilot. They now want to embed Azure Copilot features into their internal workflow for advanced analytics. We discuss synergy between their existing Copilot usage and Azure-based AI services, governance considerations, and success factors for a staged rollout. The partner is excited about combining Copilot’s AI-driven assistance with robust Azure services. We schedule a follow-up for deeper solution architecture mapping.
         </p>
       </div>
-      <!-- Step 5 -->
+      <!-- STEP 5 -->
       <div class="ptc-step">
         <p>
-          A new request arrives about implementing SAP HANA DB on-prem to Azure DR. This is an inherently complex scenario involving replication, data consistency, and architectural considerations for high availability. The partner’s request is detailed, letting me form an initial approach. I also note that Data &amp; AI PTC expertise will be critical. Before going further, I confirm with my Data &amp; AI colleague that we can handle this jointly—teamwork is essential in delivering holistic solutions.
+          A new request arrives about implementing SAP HANA DB on-prem to Azure DR—an inherently complex scenario involving replication, data consistency, and high availability. The partner’s documentation is refreshingly detailed, helping me form an initial approach. Recognizing that Data &amp; AI PTC expertise is essential, I confirm we can collaborate. None of us operates in isolation; teamwork is critical for a holistic solution.
         </p>
       </div>
-      <!-- Step 6 -->
+      <!-- STEP 6 -->
       <div class="ptc-step">
         <p>
-          Between calls and case reviews, I carve out a brief moment to see my daughter. One advantage of a hybrid work environment is integrating personal life in short, meaningful bursts. This brief break energizes me for the afternoon’s tasks.
+          Between calls and case reviews, I carve out a brief moment to see my daughter. One advantage of a hybrid work environment is integrating personal life in short, meaningful bursts. Recharged, I return to tackle my afternoon tasks.
         </p>
       </div>
-      <!-- Step 7 -->
+      <!-- STEP 7 -->
       <div class="ptc-step">
         <p>
-          Returning from my break, I make a quick call to our Security PTC to discuss the NetApp partner’s newfound interest in Sentinel. We agree on a follow-up call to assess their threat monitoring approach, discuss advanced security analytics, and propose next steps. It’s always gratifying to connect the dots across solution areas—Security, Azure Infrastructure, and expansions into Data &amp; AI.
+          Returning from my break, I place a quick call to our Security PTC about the NetApp partner’s newfound interest in Sentinel. We schedule a session to assess their threat monitoring approach, discuss advanced security analytics, and outline next steps. It’s gratifying to connect the dots across Security, Azure Infrastructure, and expansions into Data &amp; AI.
         </p>
       </div>
-      <!-- Step 8 -->
+      <!-- STEP 8 -->
       <div class="ptc-step">
         <p>
-          A licensing query then appears in my inbox. While licensing typically falls outside TPD’s direct scope, I ensure the partner feels supported by redirecting them to the correct channel. This fosters trust and maintains a seamless overall Microsoft experience.
+          A licensing query then appears. Although licensing typically falls outside TPD’s direct scope, I make sure the partner feels supported by routing them to the correct channel. This fosters trust and a seamless overall Microsoft experience.
         </p>
       </div>
-      <!-- Step 9 -->
+      <!-- STEP 9 -->
       <div class="ptc-step">
         <p>
-          Next, I dedicate time to scoping the SAP HANA DR request more deeply, referencing best practices from the Cloud Adoption Framework and internal resources. I share preliminary findings with my Data &amp; AI colleague so we’re aligned for our upcoming consultation. Being well-prepared helps us deliver a cohesive solution and saves everyone time.
+          Next, I dedicate time to scoping the SAP HANA DR request in detail, referencing best practices from the Cloud Adoption Framework. I share preliminary findings with my Data &amp; AI colleague so we’re aligned for our upcoming consultation. Being prepared ensures a cohesive solution and saves everyone time.
         </p>
       </div>
-      <!-- Step 10 -->
+      <!-- STEP 10 -->
       <div class="ptc-step">
         <p>
-          I then hop into an internal community call—part of our continuous learning culture. We discuss emerging scenarios and advanced solution frameworks. These knowledge-sharing sessions often surface direct benefits for my partners, expanding my ability to help them solve complex challenges.
+          I then join an internal community call—a vital part of our continuous learning culture. We discuss emerging scenarios and advanced solution frameworks. These knowledge-sharing sessions often yield direct benefits for my partners, expanding our capacity to address complex challenges.
         </p>
       </div>
-      <!-- Step 11 -->
+      <!-- STEP 11 -->
       <div class="ptc-step">
         <p>
-          After that, I follow up with the partner regarding their licensing query, confirming the handoff to the appropriate team. Even if TPD can’t solve it directly, we maintain accountability to ensure a positive partner experience.
+          After that, I follow up with the partner on their licensing query, confirming the right team is engaged. Even if TPD can’t solve it directly, we maintain accountability to ensure a positive partner experience.
         </p>
       </div>
-      <!-- Step 12 -->
+      <!-- STEP 12 -->
       <div class="ptc-step">
         <p>
-          Before concluding the day, I re-check my operational board for any late requests. Tomorrow’s schedule includes a Sentinel enablement session for the NetApp partner, a detailed consultation for SAP HANA DR with my Data &amp; AI colleague, and potential cross-collaboration with our Modern Work and Security PTCs for a new financial/government scenario. I send final emails, tidy my notes, and reflect on the day’s successes—resolving issues, uncovering expansion opportunities, and building synergy across solution areas.
+          Before concluding the day, I re-check my operational board for late requests. Tomorrow’s schedule includes a Sentinel enablement session for the NetApp partner, a detailed SAP HANA DR consultation, and potential cross-collaboration with Modern Work and Security PTCs for a new financial/government scenario. I send final emails, finalize notes, and reflect on the day’s achievements—resolving issues, spotting fresh opportunities, and facilitating synergy across solution areas.
         </p>
       </div>
-      <!-- Step 13 -->
+      <!-- STEP 13 -->
       <div class="ptc-step">
         <p>
-          Concluding the day, I feel satisfied. I navigated tenant migrations, AI expansions, advanced DR discussions, licensing triages, and skill development—while still making time for family. The role is dynamic and ever-evolving, but that’s precisely why being a Partner Technical Consultant is so fulfilling: every challenge builds my expertise and helps partners thrive, strengthening our Microsoft community.
+          Concluding the day, I feel satisfied. I navigated tenant migrations, AI expansions, advanced DR discussions, licensing triages, and personal commitments—while honing my expertise. This dynamic, ever-evolving role is exactly why being a Partner Technical Consultant feels so rewarding: each challenge fosters growth and helps partners succeed, strengthening our collective Microsoft community.
         </p>
       </div>
-      <!-- Step 14 -->
+      <!-- STEP 14 -->
       <div class="ptc-step">
         <p>
-          By day’s end, I see how vital this role can be—not just solving technical roadblocks, but shaping holistic partner experiences. From connecting the right experts to designing multi-solution roadmaps, each engagement yields tangible outcomes that help businesses excel in the cloud. Every day is an adventure, filled with breakthroughs, continuous learning, and real-world impact—fueling my passion to do it all again tomorrow.
+          By day’s end, I see just how pivotal this role can be—not only in addressing technical obstacles but in shaping complete partner solutions. From matching partners with the right experts to orchestrating multi-solution roadmaps, each engagement delivers tangible outcomes that enable businesses to thrive in the cloud. Every day is an adventure, rich with breakthroughs, learning, and real-world impact—fueling my passion to do it all again tomorrow.
         </p>
       </div>
     </div>
@@ -115,5 +135,7 @@
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
   </footer>
 
+  <!-- Reference your script for theme toggling, if applicable -->
+  <script src="script.js"></script>
 </body>
 </html>
