@@ -1,14 +1,6 @@
 /* script.js */
 
 (function() {
-  // Navbar toggle for mobile
-  const navbarToggle = document.getElementById('navbarToggle');
-  const navbarLinks = document.getElementById('navbarLinks');
-
-  navbarToggle.addEventListener('click', () => {
-    navbarLinks.classList.toggle('show');
-  });
-
   // Theme toggle (light/dark)
   const toggleThemeBtn = document.getElementById('toggleTheme');
   const currentTheme = localStorage.getItem('theme');
