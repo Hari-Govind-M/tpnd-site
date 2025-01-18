@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TPnD - Plan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-logo">TPnD</div>
+      <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="navbar-links" id="navbarLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plan.html" class="active">Plan</a></li>
+        <li><a href="build.html">Build</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="grow.html">Grow</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+        <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <h1>Plan</h1>
+      <p>
+        The <strong>Plan</strong> phase focuses on discovery, assessment, and establishing a 
+        high-level roadmap. We evaluate your current environment—whether on-premises, cloud, or 
+        hybrid—and identify technical gaps and AI opportunities.
+      </p>
+      <ol>
+        <li><strong>Discovery & Assessment</strong>: We identify challenges, key workloads, and AI opportunities.</li>
+        <li><strong>High-Level Architecture</strong>: We help you decide on approaches like rehost, refactor, or greenfield.</li>
+        <li><strong>Roadmap</strong>: We create a plan that aligns your technical investments with strategic business goals.</li>
+      </ol>
+      <p>
+        <em>Example Scenario:</em> A mid-sized ISV wants to migrate a legacy .NET application to 
+        Azure while adding AI features. After assessing on-prem VMs and databases, we outline 
+        a plan to rehost certain components, refactor others for containers, and integrate 
+        <strong>Azure Cognitive Services</strong>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
