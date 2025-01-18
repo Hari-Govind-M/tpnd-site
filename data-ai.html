@@ -3,305 +3,352 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Azure Infrastructure</title>
-  <!-- Same style and script references as your main site -->
+  <title>Data &amp; AI with TPD</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- Optionally include your top-right theme toggle / PTC day box 
-       or skip it if each solution page is simpler. 
-       This snippet only has the main content. -->
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
 
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <!-- Home icon above solution areas -->
+    <div class="home-icon" style="margin-bottom: 1rem;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" fill="var(--primary-color)" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+
+    <h2>Solution Areas</h2>
+    <ul class="solution-areas">
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
+    </ul>
+  </aside>
+
+  <!-- Top-Right Theme Toggle & PTC Link -->
+  <div class="top-right-container">
+    <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+      <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+    </div>
+    <div class="ptc-day-box">
+      <a href="my-day-as-a-ptc.html" class="ptc-day-link">How my day as a PTC looks</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
   <div class="main-wrapper">
     <main class="main-content">
 
-      <!-- Hero-like title for consistency; adjust as you see fit -->
-      <section class="section fade-in-up">
-        <h1>Elevate Your Cloud Practice with Azure Infrastructure</h1>
-        <h4>Your Path to Scalable, Secure, and Intelligent Solutions</h4>
+      <!-- Centered Hero Heading -->
+      <section class="section fade-in-up" style="text-align: center;">
+        <h1>Accelerate Your Data &amp; AI Initiatives with Technical Presales and Deployment</h1>
+        <h4>Overcome Technical Blockers &amp; Close More Deals in Data Platform Modernization, Advanced Analytics, and AI</h4>
       </section>
 
-      <!-- Keep the entire text EXACTLY as provided, in sections for structure -->
+      <!-- Intro Paragraphs -->
       <section class="section fade-in-up">
-        <p><strong>Azure Infrastructure</strong> stands at the core of digital transformation, enabling organizations to migrate existing applications, accelerate new development, and innovate with advanced technologies like AI. From compute and storage to networking and governance, Azure Infrastructure services offer the flexibility, security, and performance you need to run your workloads in the cloud or hybrid environments.</p>
+        <p>Today, data is currency—fueling innovation, efficiency, and competitive advantage. Whether your customers need to modernize legacy data platforms, implement advanced analytics, or embed cutting-edge AI capabilities, Microsoft Azure provides a robust ecosystem of Data &amp; AI services. Yet the complexity of these solutions often poses challenges in closing deals, addressing technical blockers, and delivering successful implementations.</p>
 
-        <p>When combined with the <strong>Technical Presales and Deployment (TPD)</strong> team’s guidance, you gain a strategic edge: expert insights, tailored best practices, and hands‐on support to <strong>plan</strong>, <strong>build</strong>, <strong>sell</strong>, and <strong>grow</strong> your Azure Infrastructure solutions. Whether you’re moving SAP to the cloud, setting up high‐performance computing (HPC), or simply looking to modernize your datacenter operations, TPD can help you unlock the full potential of Azure Infrastructure.</p>
+        <p>That’s why the Technical Presales and Deployment (TPD) team is here: to help you envision, sell, plan, and deploy Data &amp; AI solutions that deliver meaningful insights and transformative outcomes. Below, we’ll explore the powerful Azure Data &amp; AI offerings, common scenarios, and how TPD can guide you at every stage.</p>
       </section>
 
-      <hr class="fade-in-up"/>
-
+      <!-- Why Focus on Data & AI => 5 Bubbles -->
       <section class="section fade-in-up">
-        <h2>Why Focus on Azure Infrastructure?</h2>
-        <ol>
-          <li><strong>End‐to‐End Cloud &amp; Hybrid Flexibility</strong><br/>
-            Azure’s extensive suite of <strong>Infrastructure‐as‐a‐Service (IaaS)</strong>, <strong>Platform‐as‐a‐Service (PaaS)</strong>, and <strong>hybrid</strong> tools (like <strong>Azure Arc</strong> and <strong>Azure Stack</strong>) ensures you can run virtually any workload—on‐premises, in the cloud, or at the edge.
-          </li>
-          <li><strong>Unparalleled Security &amp; Compliance</strong><br/>
-            From <strong>Network Security Groups</strong> to <strong>Azure Firewall</strong>, <strong>Azure Policy</strong>, and built‐in encryption features, Azure Infrastructure is designed with security at its core—essential for meeting regulatory requirements and safeguarding data.
-          </li>
-          <li><strong>Performance at Scale</strong><br/>
-            Azure’s global footprint and specialized VM families (<strong>N‐Series</strong>, <strong>H‐Series</strong>) enable high‐performance computing scenarios that were once cost‐prohibitive or too complex to manage on‐premises.
-          </li>
-          <li><strong>Cost Optimization &amp; Governance</strong><br/>
-            Tools like <strong>Azure Cost Management</strong>, <strong>Azure Advisor</strong>, and <strong>Azure Resource Manager</strong> help you right‐size resources and maintain financial visibility—all crucial for a successful cloud practice.
-          </li>
-          <li><strong>Rapid Innovation with AI &amp; Analytics</strong><br/>
-            By leveraging the connectivity and integrated services within Azure, you can easily attach advanced AI or data analytics solutions to your infrastructure, delivering insights and unlocking new business models.
-          </li>
-        </ol>
+        <h2>Why Focus on Data &amp; AI?</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 220px;">
+            <strong>Data-Driven Insights</strong>
+            <p style="margin-top: 0.5rem;">
+              Making data-driven decisions is no longer a luxury—it’s a strategic imperative. Solutions like Azure Synapse, Power BI, and Azure Machine Learning provide the foundation to turn raw data into actionable insights.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 220px;">
+            <strong>Scale &amp; Performance</strong>
+            <p style="margin-top: 0.5rem;">
+              Azure’s global infrastructure and services like Azure SQL Managed Instance, Azure Cosmos DB, and Azure Databricks enable real-time analytics, high throughput, and robust elasticity.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 220px;">
+            <strong>Integrations for Every Need</strong>
+            <p style="margin-top: 0.5rem;">
+              From relational databases (Azure SQL Database) to big data analytics (HDInsight, Data Lake), Azure can handle virtually any data scenario or volume.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 220px;">
+            <strong>Advanced AI &amp; Cognitive Capabilities</strong>
+            <p style="margin-top: 0.5rem;">
+              Whether you’re experimenting with Azure OpenAI, building ML models, or tapping into Azure Cognitive Services, you can infuse intelligence into apps and processes seamlessly.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 220px;">
+            <strong>Business Enablement</strong>
+            <p style="margin-top: 0.5rem;">
+              Successfully implementing Data &amp; AI can lead to cost optimizations, revenue growth, and improved customer experiences—key levers for modern businesses.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <hr class="fade-in-up"/>
-
+      <!-- Microsoft Data & AI Services => 5x2 table -->
       <section class="section fade-in-up">
-        <h2>The Azure Infrastructure Ecosystem: A Broad Spectrum of Possibilities</h2>
-        <p>Azure Infrastructure is <strong>immensely</strong> broad. Below is a simplified look at the key services and features under its umbrella—many of which you can tap into through your TPD engagements:</p>
-        <ul>
-          <li><strong>Compute &amp; Virtualization</strong><br/>
-            <em>Azure Virtual Machine, Availability Set, N‐Series VMs, H‐Series VMs, RDS on Azure IaaS, Windows Server, Azure VMware Solution, Azure Stack Hub</em>
-          </li>
-          <li><strong>Networking</strong><br/>
-            <em>Azure Virtual Network, Azure ExpressRoute, Azure VPN (Point to Site &amp; Site to Site), Traffic Manager, Application Gateway &amp; Web Application Firewall, Azure Load Balancer (Basic/Standard), Azure Front Door, Azure Firewall, Network Watcher, Azure Virtual WAN</em>
-          </li>
-          <li><strong>Hybrid &amp; Edge</strong><br/>
-            <em>Azure Arc, Azure Stack Edge, Azure Stack HCI, Azure Stack Hub</em>
-          </li>
-          <li><strong>Storage &amp; Data Transfer</strong><br/>
-            <em>Azure Storage, NetApp Files, Azure NetApp Files, Azure Data Box, HPC Cache, Avere vFXT, Cray, Cray ClusterStor</em>
-          </li>
-          <li><strong>Migration &amp; Modernization</strong><br/>
-            <em>Azure Migrate, Azure Site Recovery, Azure Backup, Microsoft Cloud Adoption Framework for Azure</em>
-          </li>
-          <li><strong>SAP on Azure</strong><br/>
-            <em>Azure Center for SAP Solutions, SAP Azure Large Instances, SAP Business Suite, SAP S/4HANA, Azure VMs Certified for SAP</em>
-          </li>
-          <li><strong>Management &amp; Governance</strong><br/>
-            <em>Azure Resource Manager, Azure Policy, RBAC, Azure Blueprint, Azure Monitor, Azure Advisor, Azure Automation, Azure Lighthouse, Azure Update Manager</em>
-          </li>
-          <li><strong>Specialized Services</strong><br/>
-            <em>Azure Batch (for large‐scale parallel jobs), Azure CycleCloud (HPC orchestration), Application Gateway WAF, Hybrid Networking, Azure Landing Zone, Copilot for Azure</em>
-          </li>
-        </ul>
-        <p>This comprehensive set of services means there’s <strong>always</strong> a solution that meets your customer’s unique needs—no matter how specialized or complex.</p>
+        <h2>Microsoft Data &amp; AI Services: A Comprehensive Suite</h2>
+        <p>Azure Data &amp; AI covers a broad range of services and solutions. Below is a snapshot of what you can tap into during your TPD engagements:</p>
+
+        <div class="table-container" style="margin-top: 1rem;">
+          <table class="simple-table">
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Data Platform Modernization</strong><br/>
+                <em>Azure SQL Database, Azure SQL Managed Instance, SQL Server (on-prem &amp; hybrid), Azure Database for MySQL/PostgreSQL/MariaDB, Azure Database Migration Service, Azure Cosmos DB, Microsoft Fabric, Copilot for Fabric</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Advanced Analytics</strong><br/>
+                <em>Azure Synapse, Azure Data Factory, Data Lake Storage, HDInsight, Databricks</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Artificial Intelligence</strong><br/>
+                <em>Azure AI Services, Azure AI Studio, Azure Machine Learning, Azure OpenAI, Azure Cognitive Search</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Visualization &amp; Insights</strong><br/>
+                <em>Power BI, Copilot for Power BI</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Data &amp; AI Tools (Misc.)</strong><br/>
+                <em>ML.NET, SQL Server ML Services</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Others</strong><br/>
+                <em>(You can mention additional services if needed—like Azure Cognitive Services for speech, language, vision, etc.)</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Ingest &amp; Manage</strong><br/>
+                <em>Azure Data Explorer, Azure Databricks, Azure Event Hubs</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Hybrid &amp; Mixed</strong><br/>
+                <em>SQL Server Big Data Clusters, Azure Arc for Data Services</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Identity &amp; Governance</strong><br/>
+                <em>Azure AD, RBAC, Azure Policy, Purview</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Operations &amp; Monitoring</strong><br/>
+                <em>Azure Monitor, Azure Advisor, Well-Architected Framework</em>
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
 
-      <hr class="fade-in-up"/>
-
+      <!-- Real-World Challenges => bubble containers -->
       <section class="section fade-in-up">
-        <h2>How TPD Fits In: Turning Possibilities into Action</h2>
-        <p>The <strong>Technical Presales and Deployment</strong> team helps you <em>navigate this vast Azure Infrastructure ecosystem</em> with confidence. Here’s how:</p>
+        <h2>Real-World Challenges &amp; How TPD Helps</h2>
 
-        <h3>1. Plan</h3>
-        <ul>
-          <li><strong>Technical Assessments</strong>: We’ll analyze your current architecture, identify gaps, and recommend the right Azure Infrastructure components—from compute configurations to networking setups.</li>
-          <li><strong>Solution Roadmap</strong>: Align your migration or modernization goals with the <strong>Microsoft Cloud Adoption Framework for Azure</strong>—ensuring alignment with best practices from day one.</li>
-          <li><strong>Licensing &amp; Cost Guidance</strong>: We’ll walk you through cost optimization tools like <strong>Azure Cost Management</strong> and identify opportunities (like <strong>Azure Hybrid Benefit</strong>) to reduce spending.</li>
-        </ul>
-
-        <h3>2. Build</h3>
-        <ul>
-          <li><strong>Architecture Review &amp; Design</strong>: Whether it’s multi‐region availability or HPC solutions on <strong>N‐Series</strong> VMs, our TPD experts help you craft a robust architecture.</li>
-          <li><strong>Proof of Concept</strong>: Get hands‐on guidance to spin up pilot environments for services like <strong>Azure VMware Solution</strong>, <strong>SAP on Azure</strong>, or <strong>Azure Stack</strong> solutions.</li>
-          <li><strong>Security &amp; Governance</strong>: We integrate security controls from <strong>Azure Firewall</strong> to <strong>Network Security Groups</strong> (NSG) and <strong>Azure Policy</strong>, ensuring compliance every step of the way.</li>
-        </ul>
-
-        <h3>3. Sell</h3>
-        <ul>
-          <li><strong>Technical Demos &amp; Presales</strong>: Impress customers with fully configured demos—showcasing features like <strong>Application Gateway with WAF</strong>, <strong>Azure Front Door</strong>, and <strong>site‐to‐site VPN</strong>.</li>
-          <li><strong>Objection Handling</strong>: Address concerns around performance, cost, or complexity with real‐world data and success stories.</li>
-          <li><strong>Competitive Positioning</strong>: Demonstrate how Azure’s integrated services beat piecemeal solutions in security, scalability, and global reach.</li>
-        </ul>
-
-        <h3>4. Grow</h3>
-        <ul>
-          <li><strong>Post‐Deployment Optimization</strong>: After workloads go live, we’ll assist with performance tuning (e.g., <strong>Azure Monitor</strong>, <strong>Network Watcher</strong>), cost optimization, and advanced configuration.</li>
-          <li><strong>Hybrid &amp; Edge Scenarios</strong>: Extend your success to edge computing with <strong>Azure Stack Edge</strong> or unify on‐premises and cloud resources via <strong>Azure Arc</strong>.</li>
-          <li><strong>Innovation Enablement</strong>: We’ll help you add new layers—like AI, analytics, or IoT—on top of your existing infrastructure investments.</li>
-        </ul>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <!-- Bubble 1 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>1. Closing Deals &amp; Overcoming Objections</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A potential customer is skeptical about the complexity of migrating on-prem SQL data to Azure Synapse or setting up real-time analytics.<br/>
+              <strong>TPD Support</strong>: Provide presales demos with near real-time analytics, cost discussions (ROI/TCO), address data governance needs with Azure Policy and Azure Monitor.
+            </p>
+          </div>
+          <!-- Bubble 2 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>2. Designing Scalable Data Architectures</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: Handling petabyte-scale data ingestion/analytics for an IoT use case.<br/>
+              <strong>TPD Support</strong>: Recommend right data storage, ingestion pipelines, and analytics layers, ensuring alignment with best practices.
+            </p>
+          </div>
+          <!-- Bubble 3 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>3. Ensuring Successful AI Deployments</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A customer wants AI-driven chatbots or predictive analytics but lacks ML framework expertise.<br/>
+              <strong>TPD Support</strong>: Walk through Azure ML lifecycle, suggest Azure OpenAI, Cognitive Services, or custom ML solutions with best practices.
+            </p>
+          </div>
+          <!-- Bubble 4 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>4. Publishing &amp; Monetizing Data &amp; AI Solutions</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: You’ve built an industry-specific analytics solution and want to list it on the commercial marketplace.<br/>
+              <strong>TPD Support</strong>: Help with marketplace certification, packaging, co-sell, and recommended pricing/promotion strategies.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <hr class="fade-in-up"/>
-
+      <!-- TPD Engagement Model => 2x2 table (Plan/Envision, Build/Integrate, Sell/Publish, Grow/Optimize) -->
       <section class="section fade-in-up">
-        <h2>Success Stories</h2>
-
-        <h3>1. Migrating On‐Prem Hyper‐V Workloads to Azure for a Retail Chain</h3>
-        <p><strong>Scenario</strong>: A mid‐sized retail chain wants to migrate 300 on‐prem VMs running Hyper‐V to Azure for better scalability.</p>
-        <ul>
-          <li><strong>TPD Involvement</strong>:
-            <ul>
-              <li>Conducted readiness assessment with <em>Azure Migrate</em>.</li>
-              <li>Advised on network configuration using <em>Azure Virtual Network</em> and <em>VPN – Site to Site</em> for a secure hybrid environment.</li>
-              <li>Recommended <em>Azure Advisor</em> for continuous resource optimization.</li>
-            </ul>
-          </li>
-          <li><strong>Outcome</strong>:
-            <ul>
-              <li>Retail chain reduces on‐prem operational costs by 30% and scales to meet seasonal traffic automatically.</li>
-              <li>Better security posture with built‐in monitoring via <em>Azure Monitor</em> and <em>Network Security Groups</em>.</li>
-            </ul>
-          </li>
-        </ul>
-
-        <h3>2. SAP on Azure for a Manufacturing Giant</h3>
-        <p><strong>Scenario</strong>: A global manufacturing company needs high availability and near real‐time performance for its SAP landscape, leveraging <em>SAP S/4HANA</em>.</p>
-        <ul>
-          <li><strong>TPD Involvement</strong>:
-            <ul>
-              <li>Detailed architecture review for <em>Azure VMs Certified for SAP</em> and <em>SAP Azure Large Instances</em>.</li>
-              <li>Guided proof of concept with <em>Azure Center for SAP Solutions</em> to ensure compliance with SAP best practices.</li>
-              <li>Recommended a high‐availability setup using <em>Availability Sets</em> and <em>Azure Site Recovery</em>.</li>
-            </ul>
-          </li>
-          <li><strong>Outcome</strong>:
-            <ul>
-              <li>Downtime minimized to near zero.</li>
-              <li>Faster analytics and reporting capabilities, leading to improved production planning.</li>
-            </ul>
-          </li>
-        </ul>
-
-        <h3>3. Modernizing Legacy Applications with Azure Stack Hub</h3>
-        <p><strong>Scenario</strong>: A software company wants to offer a consistent hybrid solution to customers who can’t move fully to the public cloud due to regulatory constraints.</p>
-        <ul>
-          <li><strong>TPD Involvement</strong>:
-            <ul>
-              <li>Advised on installing and configuring <em>Azure Stack Hub</em> for local data processing.</li>
-              <li>Provided best practices around <em>Azure Policy</em> and <em>RBAC</em> to ensure compliance.</li>
-              <li>Demonstrated how to utilize <em>Azure DevOps</em> pipelines for continuous integration across hybrid environments.</li>
-            </ul>
-          </li>
-          <li><strong>Outcome</strong>:
-            <ul>
-              <li>Launched a new service offering that supports on‐premises customers seamlessly, unlocking a previously inaccessible market segment.</li>
-            </ul>
-          </li>
-        </ul>
+        <h2>TPD Engagement Model for Data &amp; AI</h2>
+        <div class="table-container">
+          <table class="simple-table two-by-two">
+            <tr>
+              <td>
+                <h3 style="text-align: center;">Plan &amp; Envision</h3>
+                <p><strong>Assess Current Environment</strong><br/>
+                Review existing databases, ETL processes, or AI solutions. Identify business objectives.</p>
+                <p><strong>Strategize Architecture &amp; Roadmap</strong><br/>
+                Define your data architecture using Azure Synapse or Databricks, plan migrations.</p>
+                <p><strong>Sales Enablement &amp; Licensing</strong><br/>
+                Technical demos, cost breakdowns, and licensing best practices to shorten the sales cycle.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">Build &amp; Integrate</h3>
+                <p><strong>Proof of Concept (POC)</strong><br/>
+                Validate architecture with a pilot: e.g., Azure Data Factory + ML models.</p>
+                <p><strong>Security &amp; Governance</strong><br/>
+                Data encryption, RBAC, auditing, Azure Policy, Azure Monitor.</p>
+                <p><strong>Performance Optimization</strong><br/>
+                Use Azure Analysis Services, partitioning/indexing in Cosmos DB/SQL, etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 style="text-align: center;">Sell &amp; Publish</h3>
+                <p><strong>Technical Presales</strong><br/>
+                Demos with Power BI dashboards, advanced ML workflows, cost/complexity objections.</p>
+                <p><strong>Co-Sell &amp; Marketplace Listing</strong><br/>
+                Publish your data solution, meet certification requirements, set pricing.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">Grow &amp; Optimize</h3>
+                <p><strong>Monitoring &amp; Continuous Improvement</strong><br/>
+                Stream Analytics, anomaly detection, track model accuracy in ML solutions.</p>
+                <p><strong>Expansion of AI Capabilities</strong><br/>
+                Add Copilot for Fabric or advanced language models from Azure OpenAI.</p>
+                <p><strong>Periodic Well-Architected Reviews</strong><br/>
+                Ensure cost optimization, reliability, operational excellence, performance, and security.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
 
-      <hr class="fade-in-up"/>
-
+      <!-- Hypothetical Success Stories => bubble containers -->
       <section class="section fade-in-up">
-        <h2>Partnering for Success with TPD</h2>
+        <h2>Hypothetical Success Stories</h2>
 
-        <h3>1. Leverage Expert Insights</h3>
-        <p>Azure Infrastructure can be vast and complex. TPD consultants translate complexity into clarity—ensuring you <em>implement the right services, in the right way</em>.</p>
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>1. Financial Services Firm Modernizing Data Warehouse</h3>
+          <p><strong>Scenario</strong>: A bank with a legacy on-prem data warehouse needs real-time risk analytics.</p>
+          <p><strong>TPD Involvement</strong>: Proposed Azure Synapse + Azure Machine Learning for advanced risk scoring models. Advised on migrating SSIS packages to Azure Data Factory. Provided a presales demo of real-time dashboards in Power BI.</p>
+          <p><strong>Outcome</strong>: Reduced daily batch processing time by 60%. Gained predictive analytics for proactive risk management.</p>
+        </div>
 
-        <h3>2. Secure More Deals</h3>
-        <p>From generating polished presales demos to crafting proposals that highlight <strong>Azure’s</strong> unique strengths, TPD can help you <strong>shorten sales cycles</strong> and close deals effectively.</p>
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>2. Retail ISV Monetizing AI Chatbots</h3>
+          <p><strong>Scenario</strong>: A retail solution vendor wants to integrate ML-based chatbot solutions via Azure Bot Service + Azure OpenAI.</p>
+          <p><strong>TPD Involvement</strong>: Provided architecture for data ingestion of user queries, used Azure Cosmos DB for session storage. Created a proof-of-concept chatbot demo. Guided them through marketplace listing.</p>
+          <p><strong>Outcome</strong>: Rapid sales expansion with new revenue from small/medium retailers adopting AI chatbots.</p>
+        </div>
 
-        <h3>3. Continuous Improvement</h3>
-        <p>Azure is constantly evolving with new features (like <em>Copilot for Azure</em>) and updates in existing services (e.g., <em>Azure Virtual Network Manager</em>, <em>Azure Stack</em> enhancements). TPD keeps you ahead of the curve.</p>
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+          <h3>3. Healthcare Provider Implementing Real-Time Patient Analytics</h3>
+          <p><strong>Scenario</strong>: A hospital network wants to analyze patient vitals in real time to detect emergencies faster.</p>
+          <p><strong>TPD Involvement</strong>: Recommended Azure IoT Hub + Azure Stream Analytics for real-time data. Advised on secure data storage in Data Lake with ML predictive models.</p>
+          <p><strong>Outcome</strong>: Near real-time alerts improved response times and lowered readmission rates.</p>
+        </div>
       </section>
 
-      <hr class="fade-in-up"/>
-
+      <!-- How to Engage TPD => Diagram -->
       <section class="section fade-in-up">
-        <h2>Aligning with the Microsoft AI Cloud Partner Program</h2>
-        <p>By being part of the <strong>Microsoft AI Cloud Partner Program</strong>, you gain access to TPD as a <strong>built‐in benefit</strong>. Depending on your partner status:</p>
+        <h2>How to Engage TPD for Data &amp; AI</h2>
+        <p><strong>Check Your Partner Benefits</strong><br/>
+        Sign in to Partner Center, ensure your account is tied to the Microsoft AI Cloud Partner Program.</p>
+
+        <div class="diagram-container" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Submit a TPD Request
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Collaborate with Experts
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Launch &amp; Optimize
+          </div>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          Provide project details: data warehouse modernization, advanced analytics, AI, or marketplace listing. A TPD consultant follows up within two business days to discuss architecture, POCs, demos, or presales assistance. Post-deployment, re-engage TPD for optimization, expansions, or new AI features.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section fade-in-up">
+        <h2>Frequently Asked Questions</h2>
+
+        <p><strong>Q1: Can TPD help me transition from SQL Server on-prem to Azure SQL or Synapse?</strong><br/>
+        A: Yes. TPD offers guidance on using Azure Database Migration Service, performance tuning, and right-sizing your cloud databases.</p>
+
+        <p><strong>Q2: What if my solution needs to integrate advanced language models or computer vision?</strong><br/>
+        A: TPD consultants can suggest best practices for Azure Cognitive Services, Azure OpenAI, or custom AI model deployment with Azure Machine Learning.</p>
+
+        <p><strong>Q3: Do TPD services cover production support or troubleshooting?</strong><br/>
+        A: TPD is not a break-fix or 24/7 support channel. For production outages, consider Premier Support or Advanced Support for Partners (ASfP).</p>
+
+        <p><strong>Q4: We’re new to AI—can TPD provide training?</strong><br/>
+        A: While TPD isn’t a formal training program, consultants do offer knowledge transfer. For in-depth learning, explore Microsoft Learn or formal certification paths.</p>
+
+        <p><strong>Q5: Are marketplace listing services included in TPD?</strong><br/>
+        A: Yes. We help navigate Microsoft’s commercial marketplace certification, co-sell readiness, and best practices—but listing fees or co-sell arrangements depend on partner benefits.</p>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section fade-in-up">
+        <h2>Ready to Transform Your Data &amp; AI Vision into Reality?</h2>
+        <p>From data platform modernization to advanced analytics and AI innovations, Microsoft’s Azure ecosystem has you covered. By collaborating with Technical Presales and Deployment, you’ll gain:</p>
         <ul>
-          <li><strong>Solutions Partner</strong>: Typically qualifies for <strong>unlimited</strong> presales support and 50+ hours of advisory engagement.</li>
-          <li><strong>Action Pack (MAPS)</strong>: Access to TPD, but these consultations may deduct from your advisory hours.</li>
-          <li><strong>Legacy Gold/Silver</strong>: Enjoy the same robust support while transitioning to the new partner designations.</li>
-        </ul>
-        <p><strong>Remember</strong>: If you’re new or unsure of your benefits, head to the <strong>Partner Center</strong> to verify your membership status and see what TPD services are available to you.</p>
-      </section>
-
-      <hr class="fade-in-up"/>
-
-      <section class="section fade-in-up">
-        <h2>How to Get Started</h2>
-        <p><strong>Ready to tap into TPD’s deep expertise and elevate your Azure Infrastructure solutions?</strong> Here are the steps:</p>
-
-        <ol>
-          <li><strong>Sign in to Partner Center</strong>
-            <ul>
-              <li>Use your Microsoft AI Cloud Partner Program–associated account.</li>
-              <li>Navigate to <em>Benefits</em> → <em>Technical presales &amp; deployment</em>.</li>
-            </ul>
-          </li>
-          <li><strong>Submit a TPD Services Request</strong>
-            <ul>
-              <li>Select the <em>Partner Advisory Hours</em> link (if applicable) or open a new request.</li>
-              <li>Provide a detailed case title and description. This might include:
-                <ul>
-                  <li>Your current infrastructure environment (on‐prem Hyper‐V, VMware, etc.)</li>
-                  <li>Target Azure services (e.g., Azure Stack HCI, Azure Migrate, Azure Firewall)</li>
-                  <li>Desired outcomes (e.g., reduce operational costs, implement HPC)</li>
-                </ul>
-              </li>
-              <li>Share your preferred contact method, time zone, and availability.</li>
-            </ul>
-          </li>
-          <li><strong>Collaborate &amp; Execute</strong>
-            <ul>
-              <li>A TPD consultant will reach out within two business days.</li>
-              <li>We’ll craft a game plan—covering architecture, security, cost optimization, and more.</li>
-            </ul>
-          </li>
-          <li><strong>Realize Value</strong>
-            <ul>
-              <li>Upon completing your TPD engagements, you’ll have a resilient, scalable Azure solution that meets your customers’ needs.</li>
-              <li>Continue to engage TPD for updates, expansions, or advanced scenarios.</li>
-            </ul>
-          </li>
-        </ol>
-      </section>
-
-      <hr class="fade-in-up"/>
-
-      <section class="section fade-in-up">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-
-        <p><strong>Q1: Do TPD services cover advanced networking or specialized HPC setups?</strong><br/>
-        A: Absolutely. Our Azure Infrastructure scope includes advanced concepts like <em>Azure Virtual WAN</em>, <em>ExpressRoute</em>, HPC with <strong>N‐Series</strong> or <strong>H‐Series VMs</strong>, and more.</p>
-
-        <p><strong>Q2: I need 24/7 support once in production. Can TPD provide that?</strong><br/>
-        A: TPD focuses on <strong>technical advisory</strong> and presales, not 24/7 break‐fix. For continuous or break‐fix support, look into <em>Premier Support</em> or <em>Advanced Support for Partners</em> (ASfP).</p>
-
-        <p><strong>Q3: How do I learn more about the Cloud Adoption Framework or Well‐Architected Framework?</strong><br/>
-        A: TPD can guide you through these frameworks during our planning phase. You can also find official Microsoft documentation for a deeper dive.</p>
-
-        <p><strong>Q4: How long does a typical TPD engagement last?</strong><br/>
-        A: It varies. Some partners need a quick POC consultation, while others engage us through the entire Plan‐Build‐Sell‐Grow lifecycle. Typically, engagements last from a few hours to a few weeks depending on complexity.</p>
-
-        <p><strong>Q5: Can TPD assist with moving specialized workloads, like SAP or HPC?</strong><br/>
-        A: Yes. We have experts specializing in <strong>SAP on Azure</strong>, <strong>high‐performance computing</strong> scenarios, and more. We’ll map out your requirements and offer tailored guidance.</p>
-      </section>
-
-      <hr class="fade-in-up"/>
-
-      <section class="section fade-in-up">
-        <h2>Let’s Transform Your Azure Infrastructure Together</h2>
-        <p>With <strong>Azure Infrastructure</strong> spanning compute, networking, storage, and advanced hybrid scenarios, there’s no shortage of possibilities. But navigating these options effectively—and turning them into profitable solutions—requires <strong>the right expertise</strong>.</p>
-        <p>That’s exactly what TPD provides:</p>
-        <ul>
-          <li><strong>Deep Technical Knowledge</strong> of Azure best practices.</li>
-          <li><strong>Tailored Presales &amp; Deployment Guidance</strong> based on your partner goals.</li>
-          <li><strong>Ongoing Optimization</strong> to keep your solutions ahead of the curve.</li>
+          <li>Presales Expertise to close deals faster.</li>
+          <li>Architectural Guidance for robust, scalable solutions.</li>
+          <li>Technical Best Practices to overcome deployment blockers.</li>
+          <li>Ongoing Optimization for continuous Data &amp; AI success.</li>
         </ul>
 
-        <h3>Ready to Take the Next Step?</h3>
+        <h3>Take the Next Step</h3>
         <ul>
-          <li><strong><a href="#">Schedule a TPD Consultation</a></strong> – Let’s discuss your current environment and map out your ideal Azure Infrastructure path.</li>
-          <li><strong><a href="#">Submit a TPD Services Request</a></strong> – Already know what you need? Open a case to get started right away.</li>
-          <li>Explore Other <a href="#"><strong>Solution Areas</strong></a> – From Data &amp; AI to Modern Work, discover how TPD can help you serve diverse customer needs.</li>
+          <li><strong>Schedule a TPD Consultation</strong> – Discuss your data and AI roadmap, challenges, and goals.</li>
+          <li><strong>Submit a TPD Services Request</strong> – Already have a clear scope? Let’s get started.</li>
+          <li><strong>Explore Other Solution Areas</strong> – Learn how TPD can also support Azure Infrastructure, Digital &amp; App Innovation, Modern Work, and more.</li>
         </ul>
 
-        <p><strong>Accelerate your cloud journey</strong>, differentiate your solutions, and unlock new revenue streams with <strong>Azure Infrastructure</strong>—backed by the unmatched expertise of our Technical Presales and Deployment team.</p>
-        <p>We look forward to partnering with you on this exciting transformation!</p>
+        <p>Empower your customers with advanced analytics, real-time insights, and AI-driven solutions that stand out in a data-saturated world. We look forward to partnering with you on every step of your Data &amp; AI journey!</p>
       </section>
 
     </main>
   </div>
 
-  <!-- Optional Footer -->
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
   </footer>
 
-  <!-- Same script references as main site -->
   <script src="script.js"></script>
 </body>
 </html>
