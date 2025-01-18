@@ -1,26 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Azure Infrastructure</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Security</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="">
-  <header class="site-header">
-    <!-- same navbar as other pages, or keep minimal for now -->
-    <nav class="navbar">
-      <div class="navbar-logo">TPnD</div>
-      <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+<body>
 
-  <main class="main-content">
-    <h1>Azure Infrastructure</h1>
-    <p>Placeholder page. Content coming soon...</p>
-  </main>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <!-- Home icon above solution areas -->
+    <div class="home-icon" style="margin-bottom: 1rem;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" fill="var(--primary-color)" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+
+    <h2>Solution Areas</h2>
+    <ul class="solution-areas">
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
+    </ul>
+  </aside>
+
+  <!-- Top-right Theme Toggle & PTC Link -->
+  <div class="top-right-container">
+    <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+      <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+    </div>
+    <div class="ptc-day-box">
+      <a href="my-day-as-a-ptc.html" class="ptc-day-link">How my day as a PTC looks</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <main class="main-content">
+
+      <!-- Centered Hero Heading -->
+      <section class="section fade-in-up" style="text-align: center;">
+        <h1>Strengthen Your Defenses with Microsoft Security Solutions</h1>
+        <h4>Protect Data, Devices, and Identities Using the Power of AI and Cloud-Driven Threat Intelligence</h4>
+      </section>
+
+      <!-- Intro Paragraphs -->
+      <section class="section fade-in-up">
+        <p>In an era of escalating cyber threats, organizations are striving to safeguard data, devices, and cloud environments. Microsoft Security solutions provide a comprehensive approach, spanning identity management, endpoint protection, threat intelligence, and compliance. Whether you’re safeguarding a small business or a global enterprise, Microsoft’s end-to-end security ecosystem helps you address modern security challenges while enabling secure productivity.</p>
+
+        <p>But implementing a holistic security strategy can be complex. That’s where the Technical Presales and Deployment (TPD) team comes in. We provide tailored, one-on-one guidance to help you plan, build, sell, and grow secure solutions—leveraging Azure Security, Microsoft 365 Defender, Microsoft Entra, Microsoft Purview, Microsoft Security Copilot, and beyond.</p>
+      </section>
+
+      <!-- Why Microsoft Security => 6 bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Why Microsoft Security?</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Comprehensive Threat Protection</strong>
+            <p style="margin-top: 0.5rem;">
+              From Microsoft Defender for Endpoint to Microsoft Defender for Cloud and Microsoft Sentinel, Microsoft covers the entire attack chain—helping you detect, protect, and respond faster.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Identity-Centric Security</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft Entra (formerly Azure AD) delivers robust access management, multi-factor authentication, and identity governance across cloud and on-prem services.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Data Governance &amp; Compliance</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft Purview helps classify, protect, and monitor data wherever it resides, simplifying compliance and reducing risk.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>AI-Powered Insights</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft Security Copilot harnesses advanced AI and generative models to rapidly surface threats, simplify investigation, and accelerate incident response.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Unified Management</strong>
+            <p style="margin-top: 0.5rem;">
+              Tools like Microsoft 365 Lighthouse and Microsoft Entra Permissions Management centralize oversight and simplify policy enforcement across multiple tenants or environments.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Hybrid &amp; Multi-Platform Coverage</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft extends protection across on-premises, cloud, and edge—covering Windows, Linux, macOS, Android, and iOS devices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Microsoft Security & Devices Solutions => 4x2 table -->
+      <section class="section fade-in-up">
+        <h2>Microsoft Security &amp; Devices Solutions: A Full Spectrum of Services</h2>
+        <p>Below is a sampling of Microsoft’s vast security and device offerings that can benefit from TPD’s expertise:</p>
+
+        <div class="table-container" style="margin-top: 1rem;">
+          <table class="simple-table">
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Identity &amp; Access Management</strong><br/>
+                <em>Microsoft Entra ID, Microsoft Entra ID Protection, Verified ID, External ID (B2B/B2C), Permissions Management, Internet Access, Private Access</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Endpoint &amp; Device Security</strong><br/>
+                <em>Microsoft Defender for Endpoint, Configuration Manager, Intune, Surface Devices, Windows 10/11, Windows 365</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Cloud Security</strong><br/>
+                <em>Azure Firewall, DDoS Protection, Microsoft Defender for Cloud, Defender for Containers, Defender for SQL, Defender Vulnerability Management</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Threat Intelligence &amp; Detection</strong><br/>
+                <em>Microsoft Sentinel, Microsoft Defender Threat Intelligence, Microsoft Defender XDR, Microsoft Defender for Cloud Apps</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Data Protection &amp; Compliance</strong><br/>
+                <em>Microsoft Purview (Data Governance/Security/Compliance), Microsoft Priva, Azure Key Vault, Log Analytics</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Productivity &amp; Collaboration Security</strong><br/>
+                <em>Microsoft 365 Defender, Microsoft Defender for Office 365, Microsoft 365 Apps, Microsoft 365 Lighthouse</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>AI &amp; Next-Gen Security</strong><br/>
+                <em>Microsoft Security Copilot, Microsoft Defender for DevOps, Microsoft Defender for IoT</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Misc. Solutions</strong><br/>
+                <em>MS Antimalware for Azure, Windows Security Baselines, etc.</em>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>From securing a small business’s email to protecting hybrid enterprise workloads, Microsoft solutions deliver end-to-end coverage that TPD can help you implement successfully.</p>
+      </section>
+
+      <!-- Real-World Security Scenarios => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Real-World Security Scenarios &amp; How TPD Helps</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <!-- Scenario 1 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>1. Closing Deals on Comprehensive Security Solutions</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A mid-sized business suffers frequent phishing attacks, evaluating multiple vendors for email/endpoint security.<br/>
+              <strong>TPD Support</strong>: Demos of Defender for Office 365 + Endpoint, licensing advice (M365 E3/E5), identity protection with Microsoft Entra.
+            </p>
+          </div>
+          <!-- Scenario 2 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>2. Ensuring Hybrid Cloud Security</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: An enterprise uses on-prem + multi-cloud (Azure, AWS) needing real-time unified security.<br/>
+              <strong>TPD Support</strong>: Defender for Cloud for multi-cloud visibility, Microsoft Sentinel for centralized incident response, Azure Firewall + DDoS for perimeter defense.
+            </p>
+          </div>
+          <!-- Scenario 3 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>3. Protecting Identities &amp; Building Zero Trust</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: Org wants Zero Trust principles around user/device identity, without harming productivity.<br/>
+              <strong>TPD Support</strong>: Microsoft Entra ID, Conditional Access, MFA, Verified ID, Permissions Management, and risk-based policies from Entra ID Protection.
+            </p>
+          </div>
+          <!-- Scenario 4 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>4. Securing Application Development &amp; DevOps</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: Dev team needs vulnerability detection early in CI/CD, plus container workload security.<br/>
+              <strong>TPD Support</strong>: Defender for DevOps to scan code repos, Defender for Containers for Kubernetes, logs into Sentinel for advanced threat detection.
+            </p>
+          </div>
+          <!-- Scenario 5 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>5. Data Governance &amp; Compliance at Scale</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A financial institution must comply with strict regulations, securing data across multiple geos.<br/>
+              <strong>TPD Support</strong>: Microsoft Purview for data classification, encryption with Azure Key Vault, auditing via Defender for SQL, plus Security Copilot for faster threat analysis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TPD Engagement Model => 2x2 table (Plan/Envision, Build/Configure, Sell/Adopt, Grow/Optimize) -->
+      <section class="section fade-in-up">
+        <h2>TPD Engagement Model for Microsoft Security</h2>
+        <div class="table-container">
+          <table class="simple-table two-by-two">
+            <tr>
+              <td>
+                <h3 style="text-align: center;">1. Plan &amp; Envision</h3>
+                <p><strong>Threat Landscape Analysis</strong>: Understand on-prem, multi-cloud, device, compliance needs. Identify high-risk areas.</p>
+                <p><strong>Solution Roadmap</strong>: Choose relevant Microsoft Security services (e.g., M365 Defender, Azure Firewall). Craft Zero Trust blueprint.</p>
+                <p><strong>Licensing &amp; ROI Discussions</strong>: Compare M365 E3/E5 combos vs. third-party solutions.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">2. Build &amp; Configure</h3>
+                <p><strong>Architecture &amp; Setup</strong>: Configure Defender products, Entra identity solutions, Azure security features.</p>
+                <p><strong>Proof of Concept (POC)</strong>: Validate endpoint security or data protection with best practices from TPD.</p>
+                <p><strong>Integration &amp; Governance</strong>: Deploy security baselines, conditional access, unify alerts in Microsoft Sentinel.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 style="text-align: center;">3. Sell &amp; Adopt</h3>
+                <p><strong>Technical Presales</strong>: Demos highlighting AI, integrated management, centralized threat analytics.</p>
+                <p><strong>Objection Handling</strong>: Tackle complexity, vendor lock‐in, or data sovereignty concerns.</p>
+                <p><strong>User &amp; Admin Readiness</strong>: Provide training resources and admin guides for incident response.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">4. Grow &amp; Optimize</h3>
+                <p><strong>Post‐Deployment Review</strong>: Track KPIs like detection speed, compliance checks, refine policies/alerts.</p>
+                <p><strong>Advanced Scenarios</strong>: Integrate Security Copilot, expand coverage to IoT or DevOps, or adopt posture management for containers.</p>
+                <p><strong>Continuous Improvement</strong>: Periodic TPD check-ins for new threats, product releases, or compliance changes.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hypothetical Success Stories => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Hypothetical Success Stories</h2>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>1. Manufacturing Firm Deploys XDR</h3>
+          <p><strong>Scenario</strong>: A manufacturer faces rising ransomware attacks, needs endpoint + identity protection.</p>
+          <p><strong>TPD Involvement</strong>: Showed Microsoft Defender XDR capabilities, proof of concept with Microsoft Sentinel for centralized monitoring, knowledge transfer for advanced threats.</p>
+          <p><strong>Outcome</strong>: Reduced detection/response times, blocked two ransomware attempts in the first quarter.</p>
+        </div>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>2. Global Retailer Embraces Zero Trust</h3>
+          <p><strong>Scenario</strong>: A retailer with hybrid cloud and partner integrations wants Zero Trust for workforce and vendors.</p>
+          <p><strong>TPD Involvement</strong>: Implemented Microsoft Entra external ID for B2B, integrated Defender for Endpoint on store devices, introduced Security Copilot for threat hunting.</p>
+          <p><strong>Outcome</strong>: Consistent security policies across 20+ regions, significantly fewer vendor breaches.</p>
+        </div>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+          <h3>3. Healthcare Provider Adopts Purview &amp; Priva</h3>
+          <p><strong>Scenario</strong>: A healthcare org needs HIPAA compliance, secure patient data, and robust data governance.</p>
+          <p><strong>TPD Involvement</strong>: Set up Microsoft Purview data classification, recommended Microsoft Priva for controlling personal data usage, used Key Vault encryption for sensitive files.</p>
+          <p><strong>Outcome</strong>: Streamlined compliance checks, real-time alerts for data misuse, improved data transparency.</p>
+        </div>
+      </section>
+
+      <!-- How to Engage TPD => diagram -->
+      <section class="section fade-in-up">
+        <h2>How to Engage TPD for Security</h2>
+        <p><strong>Check Your Partner Benefits</strong><br/>
+        Sign in to Partner Center and ensure your account is linked to the Microsoft AI Cloud Partner Program. Under Benefits → Technical presales &amp; deployment, confirm eligibility (e.g., Solutions Partner, Action Pack, Legacy Gold/Silver).</p>
+
+        <div class="diagram-container" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Submit a TPD Request
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Collaborate &amp; Execute
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Optimize &amp; Evolve
+          </div>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          Outline your scenario—adopting Defender for Cloud, migrating to Microsoft Sentinel, implementing Zero Trust with Microsoft Entra. Expect a TPD response within two business days to discuss presales or deployment best practices. Re-engage TPD for advanced integrations (e.g., Security Copilot) or expansions into IoT or DevOps scenarios.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section fade-in-up">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q1: Does TPD provide 24/7 monitoring or incident response services?</strong><br/>
+        A: TPD focuses on technical presales and deployment guidance. For continuous monitoring or emergency support, explore Premier Support, Advanced Support for Partners, or an MSSP.</p>
+
+        <p><strong>Q2: My solution uses multiple Azure security products—can TPD help integrate them?</strong><br/>
+        A: Absolutely. TPD can assist in designing unified solutions across Azure Firewall, DDoS Protection, Defender for Cloud, Microsoft Sentinel, and more.</p>
+
+        <p><strong>Q3: How does TPD handle compliance regulations like GDPR, HIPAA, or PCI?</strong><br/>
+        A: TPD advisors recommend Microsoft tools (Purview, Priva, encryption) that address regulations, but final compliance readiness is typically validated by customers’ legal teams.</p>
+
+        <p><strong>Q4: Is Microsoft Security Copilot generally available?</strong><br/>
+        A: Availability may vary by region/licensing. TPD can share the latest info on enrolling in or evaluating Security Copilot.</p>
+
+        <p><strong>Q5: Can TPD help with device‐specific solutions, like Surface or OEM device security?</strong><br/>
+        A: Yes. TPD can guide you on Windows security features, Surface device management, and Endpoint Management best practices to keep endpoints secure.</p>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section fade-in-up">
+        <h2>Defend Your Business with Confidence</h2>
+        <p>From Azure and Microsoft 365 to Microsoft Entra and Microsoft Purview, Microsoft delivers a vast ecosystem of security solutions designed to protect your customers at every layer. By partnering with Technical Presales and Deployment, you’ll gain:</p>
+        <ul>
+          <li>Expert Presales Guidance to showcase the unique value of Microsoft’s integrated security offerings.</li>
+          <li>Deployment Best Practices that reduce complexity and speed up time-to-protection.</li>
+          <li>Knowledge Transfer &amp; Ongoing Optimization to stay ahead of emerging threats and compliance demands.</li>
+        </ul>
+
+        <h3>Take the Next Step</h3>
+        <ul>
+          <li><strong>Schedule a TPD Consultation</strong> – Let’s discuss your security goals, challenges, and how we can help.</li>
+          <li><strong>Submit a TPD Services Request</strong> – Already know what you need? Open a case and get started right away.</li>
+          <li><strong>Explore Other Solution Areas</strong> – See how TPD can also support Data &amp; AI, Modern Work, and more.</li>
+        </ul>
+
+        <p>Partner with TPD to build end-to-end security solutions that instill confidence, drive trust, and protect what matters most—so your customers can thrive in an increasingly connected world.</p>
+      </section>
+
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
