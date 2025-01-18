@@ -1,366 +1,214 @@
-/* style.css */
-
-/* Root variables */
+/****************************************************
+ * Root Variables (colors, fonts, spacing, etc.)
+ ****************************************************/
 :root {
-  --primary-color: #2d5be3;
-  --secondary-color: #959da5;
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --light-bg: #f6f8fa;
-  --dark-bg: #262626;
-  --dark-text: #efefef;
+  /* Basic color palette */
+  --primary-color: #2d5be3;         /* used for lines, dots, highlights */
+  --secondary-color: #0078d4;       /* optional accent color */
+  --light-bg: #f9f9f9;              /* backgrounds for boxes, steps, etc. */
+  --text-color: #333333;            /* main text color */
+  --body-bg: #ffffff;               /* overall page background color */
+  --font-stack: 'Segoe UI', Tahoma, sans-serif;
+
+  /* Spacing & sizing if needed */
+  --base-padding: 1rem;
+  --base-margin: 1rem;
 }
 
-/* Dark theme toggling */
-body.dark-theme {
-  --bg-color: var(--dark-bg);
-  --text-color: var(--dark-text);
-  --light-bg: #2f2f2f;
-  --primary-color: #6fa0ff;
-}
-
-* {
+/****************************************************
+ * Global Elements
+ ****************************************************/
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--bg-color);
+  background-color: var(--body-bg);
   color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-stack);
+  line-height: 1.5;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 a:hover {
-  color: #1e3da0;
+  text-decoration: underline;
 }
 
-/* Scroll Progress Bar */
-#scrollProgress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: var(--primary-color);
-  z-index: 9999;
+/****************************************************
+ * Common Layout Classes (used in solution pages)
+ ****************************************************/
+/* The main wrapper around site content (if used) */
+.main-wrapper {
+  display: block; /* adjust if needed */
 }
 
-/* Sidebar */
+/* A common container for page content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* "section" style used for fade-in sections in other solution pages */
+.section {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Fade-in Up Animation (if your script uses .fade-in-up) */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/****************************************************
+ * Sidebar & Nav (if used in solution pages)
+ ****************************************************/
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: var(--light-bg);
-  border-right: 1px solid #ddd;
+  background-color: #2f2f2f; /* or your choice */
+  color: #fff;
+  min-width: 220px;
   padding: 1rem;
-  overflow-y: auto;
-  z-index: 99;
+  box-sizing: border-box;
 }
 .sidebar h2 {
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
+  margin-top: 0;
 }
 .solution-areas {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .solution-areas li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
-.solution-areas li a {
-  display: inline-block;
-  padding: 0.5rem;
-  width: 100%;
-  border-radius: 4px;
-  background-color: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.solution-areas li a:hover {
-  background-color: var(--primary-color);
+.solution-areas a {
   color: #fff;
 }
-
-/* Top-right container (theme + PTC link) */
-.top-right-container {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  z-index: 100;
-}
-.toggle-theme {
-  cursor: pointer;
-  width: 36px;
-  height: 36px;
-  background-color: var(--light-bg);
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.toggle-theme:hover {
-  background-color: #e5e5e5;
-}
-.toggle-theme svg circle {
-  fill: var(--primary-color);
-  transition: fill 0.3s ease;
-}
-body.dark-theme .toggle-theme svg circle {
-  fill: #ffcf33;
-}
-.ptc-day-box {
-  background-color: var(--light-bg);
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0.3rem 0.75rem;
-  text-align: center;
-}
-.ptc-day-link {
-  color: var(--primary-color);
-  font-weight: bold;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-.ptc-day-link:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+.solution-areas a:hover {
+  text-decoration: underline;
 }
 
-/* Back to Top Button */
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--light-bg);
-  color: var(--primary-color);
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-#backToTop:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-/* Main Wrapper */
-.main-wrapper {
-  margin-left: 200px;
-  min-height: 100vh;
-  padding: 0 2rem;
-}
-.main-content {
-  margin: 0;
-  padding: 1rem 0;
-}
-
-/* Hero Section with gradient animation */
-.hero {
-  position: relative;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  overflow: hidden;
-  background: linear-gradient(270deg, #2d5be3, #0d2d5e, #3b3c6e);
-  background-size: 600% 600%;
-  animation: gradientBG 15s ease infinite;
-  margin-bottom: 2rem;
-}
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.hero-overlay {
-  text-align: center;
-  padding: 1rem;
-}
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.hero-overlay p {
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
-}
-.cta-button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-.cta-button:hover {
-  background-color: #1e3da0;
-}
-
-/* Section spacing & fade-in animation */
-.section {
-  margin-bottom: 3rem;
-}
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in-up.is-visible {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-/* Tables */
-.table-container {
-  margin: 1.5rem 0;
-  overflow-x: auto;
-}
+/****************************************************
+ * Simple tables, e.g. .simple-table
+ ****************************************************/
 .simple-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
 }
 .simple-table th,
 .simple-table td {
   border: 1px solid #ddd;
-  padding: 1rem;
-}
-.simple-table th {
-  background-color: var(--light-bg);
-  color: var(--primary-color);
-  text-align: left;
-}
-.solution-areas-3x2 td {
-  vertical-align: top;
-  width: 33%;
+  padding: 0.75rem;
 }
 
-/* 2x2 tables for Plan-Build-Sell-Grow & PTC bullet points */
+/****************************************************
+ * Two-by-two Table Layout for Plan-Build-Sell-Grow
+ ****************************************************/
+.two-by-two {
+  width: 100%;
+}
 .two-by-two td {
   vertical-align: top;
   width: 50%;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
-/* Diagram (How to Submit) */
-.diagram-container {
+/****************************************************
+ * Top-right container (theme toggle, day-of-PTC link)
+ ****************************************************/
+.top-right-container {
+  position: absolute; /* or fixed, if desired */
+  right: 1rem;
+  top: 1rem;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
 }
-.diagram-step {
-  background-color: var(--light-bg);
-  border: 1px solid #ddd;
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  color: var(--primary-color);
-  font-weight: bold;
-  text-align: center;
-  min-width: 80px;
-}
-.diagram-arrow {
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-/* FAQ Collapsible */
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
-}
-.faq-question {
-  background: none;
-  border: none;
-  outline: none;
-  font: inherit;
-  font-weight: bold;
-  color: var(--primary-color);
+.toggle-theme {
   cursor: pointer;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 0.5rem;
 }
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0;
+.ptc-day-box a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
 }
-.faq-item.active .faq-answer {
-  max-height: 400px;
-  padding: 0.5rem 0;
+.ptc-day-box a:hover {
+  background-color: var(--secondary-color);
 }
 
-/* Footer */
+/****************************************************
+ * Footer (site-footer)
+ ****************************************************/
 .site-footer {
-  background-color: var(--light-bg);
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
   border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/****************************************************
+ * MY-DAY-AS-A-PTC PAGE: Diagrammatic Flow 
+ * Namespaced with .my-day-ptc so it won't override other pages
+ ****************************************************/
+.my-day-ptc .diagram-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
-    border-right: none;
-  }
-  .main-wrapper {
-    margin-left: 0;
-    padding: 0 1rem;
-  }
-  .top-right-container {
-    position: static;
-    justify-content: center;
-    margin: 1rem auto;
-  }
-  .hero {
-    height: 40vh;
-  }
-  .diagram-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.my-day-ptc .diagram-step {
+  position: relative;
+  background-color: var(--light-bg);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--text-color);
 }
+
+/* The dot at the beginning of each step */
+.my-day-ptc .diagram-step::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 1rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* The vertical line connecting steps (except the first) */
+.my-day-ptc .diagram-step:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: -1.5rem;
+  width: 2px;
+  height: 1.5rem;
+  background-color: var(--primary-color);
+}
+
+/****************************************************
+ * End of style.css 
+ ****************************************************/
