@@ -42,97 +42,20 @@ a:hover {
   color: #1e3da0;
 }
 
-/* ====================== */
-/* FIXED TOP NAVBAR      */
-/* ====================== */
-.site-header {
+/* ========================= */
+/* FIXED LEFT SIDEBAR       */
+/* ========================= */
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: var(--light-bg);
-  border-bottom: 1px solid #ddd;
-  z-index: 9999; /* keep it on top */
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-.navbar-logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  text-transform: uppercase;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.navbar-links li a {
-  padding: 0.5rem;
-  transition: background-color 0.2s ease;
-}
-
-.navbar-links li a:hover,
-.navbar-links li a.active {
-  background-color: var(--primary-color);
-  color: #fff;
-  border-radius: 4px;
-}
-
-.toggle-theme {
-  cursor: pointer;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1rem;
-}
-.toggle-theme svg circle {
-  fill: var(--primary-color);
-  transition: fill 0.3s ease;
-}
-body.dark-theme .toggle-theme svg circle {
-  fill: #ffcf33;
-}
-
-.navbar-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.navbar-toggle .bar {
-  display: block;
-  width: 20px;
-  height: 2px;
-  margin: 4px auto;
-  background-color: var(--primary-color);
-  transition: all 0.3s;
-}
-
-/* ==================== */
-/* FIXED LEFT SIDEBAR  */
-/* ==================== */
-.sidebar {
-  position: fixed;
-  top: 60px; /* below the navbar (height ~ 60px) */
-  left: 0;
   width: 200px;
-  height: calc(100% - 60px);
+  height: 100vh;
   background-color: var(--light-bg);
   border-right: 1px solid #ddd;
   padding: 1rem;
   overflow-y: auto;
-  z-index: 9998; /* just under the navbar */
+  z-index: 99;
 }
 
 .sidebar h2 {
@@ -165,19 +88,54 @@ body.dark-theme .toggle-theme svg circle {
   color: #fff;
 }
 
-/* ============================== */
-/* "How my day as a PTC" BOX     */
-/* ============================== */
-.ptc-day-box {
+/* ========================== */
+/* TOP-RIGHT CONTAINER        */
+/* (Theme toggle + PTC Box)   */
+/* ========================== */
+.top-right-container {
   position: fixed;
-  top: 70px;   /* slightly below the navbar */
-  right: 20px; /* near the viewport edge */
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  z-index: 100;
+}
+
+/* THEME TOGGLE ICON */
+.toggle-theme {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--light-bg);
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-theme:hover {
+  background-color: #e5e5e5;
+}
+
+.toggle-theme svg circle {
+  fill: var(--primary-color);
+  transition: fill 0.3s ease;
+}
+body.dark-theme .toggle-theme svg circle {
+  fill: #ffcf33;
+}
+
+/* HOW MY DAY BOX */
+.ptc-day-box {
+  background-color: var(--light-bg);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.3rem 0.75rem;
   text-align: center;
-  z-index: 9998; /* ensure it floats above sidebar background but below navbar */
 }
 
 .ptc-day-link {
@@ -188,30 +146,28 @@ body.dark-theme .toggle-theme svg circle {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
 }
-
 .ptc-day-link:hover {
   background-color: var(--primary-color);
   color: #fff;
 }
 
-/* ========================== */
-/* MAIN WRAPPER + CONTENT    */
-/* ========================== */
+/* ================= */
+/* MAIN WRAPPER      */
+/* ================= */
 .main-wrapper {
-  /* Enough top margin to clear the fixed navbar */
-  margin-top: 60px;
-  /* Enough left margin to clear the fixed sidebar */
-  margin-left: 200px;
-  min-height: 100vh; /* ensures full page coverage */
+  margin-left: 200px; /* offset for sidebar width */
+  min-height: 100vh;
+  padding: 0; /* no top margin needed since no fixed nav bar at top */
 }
 
-/* The actual content container, horizontally centered */
+/* MAIN CONTENT: Center it horizontally */
 .main-content {
   max-width: 900px; 
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* HERO SECTION */
 .hero {
   text-align: center;
   margin-top: 2rem;
@@ -237,14 +193,26 @@ body.dark-theme .toggle-theme svg circle {
   background-color: #1e3da0;
 }
 
+/* SECTIONS */
 .section {
   margin-bottom: 2rem;
 }
-.section h2,
-.section h3,
-.section h4 {
+.section h2 {
   margin-bottom: 0.5rem;
   color: var(--primary-color);
+}
+.section h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* FAQ STYLES */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.faq-item h3 {
+  margin-bottom: 0.5rem;
 }
 
 /* FOOTER */
@@ -253,31 +221,11 @@ body.dark-theme .toggle-theme svg circle {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #ddd;
+  margin-top: 2rem;
 }
 
-/* =============== */
-/* MEDIA QUERIES   */
-/* =============== */
+/* MEDIA QUERIES: MOBILE */
 @media (max-width: 768px) {
-  .navbar-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: var(--light-bg);
-    flex-direction: column;
-    width: 200px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    padding: 1rem;
-  }
-  .navbar-links.show {
-    transform: translateX(0%);
-  }
-  .navbar-toggle {
-    display: block;
-  }
-
-  /* Make sidebar flow normally on mobile */
   .sidebar {
     position: static;
     width: 100%;
@@ -285,16 +233,12 @@ body.dark-theme .toggle-theme svg circle {
     border-right: none;
     top: auto;
   }
-
-  /* .main-wrapper no longer offsets left for sidebar */
   .main-wrapper {
     margin-left: 0;
-    margin-top: 100px; /* a bit more top margin to accommodate expanded nav if needed */
   }
-
-  /* "How my day..." box can float or go static */
-  .ptc-day-box {
+  .top-right-container {
     position: static;
+    justify-content: center;
     margin: 1rem auto;
   }
 }
