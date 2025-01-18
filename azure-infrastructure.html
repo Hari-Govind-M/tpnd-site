@@ -4,24 +4,50 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Azure Infrastructure</title>
-  <!-- Reference the same CSS as your main site -->
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- If you want the top-right theme toggle or PTC box here, copy them from index.html
-       For now, this page will have just the main content wrapper. -->
+  <!-- Scroll Progress Bar (for top reading progress) -->
+  <div id="scrollProgress"></div>
 
+  <!-- Fixed Left Sidebar (Solution Areas) -->
+  <aside class="sidebar">
+    <h2>Solution Areas</h2>
+    <ul class="solution-areas">
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
+    </ul>
+  </aside>
+
+  <!-- Top-right container: Theme toggle & "How my day as a PTC looks" -->
+  <div class="top-right-container">
+    <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+      <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+    </div>
+    <div class="ptc-day-box">
+      <a href="my-day-as-a-ptc.html" class="ptc-day-link">How my day as a PTC looks</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
   <div class="main-wrapper">
     <main class="main-content">
 
-      <!-- Hero-like section for consistency -->
+      <!-- A simple "Hero" heading for consistency -->
       <section class="section fade-in-up">
         <h1>Elevate Your Cloud Practice with Azure Infrastructure</h1>
         <h4>Your Path to Scalable, Secure, and Intelligent Solutions</h4>
       </section>
 
-      <!-- Original text starts here, verbatim -->
+      <!-- ***** BEGIN VERBATIM TEXT ***** -->
       <section class="section fade-in-up">
         <p><strong>Azure Infrastructure</strong> stands at the core of digital transformation, enabling organizations to migrate existing applications, accelerate new development, and innovate with advanced technologies like AI. From compute and storage to networking and governance, Azure Infrastructure services offer the flexibility, security, and performance you need to run your workloads in the cloud or hybrid environments.</p>
 
@@ -295,12 +321,12 @@
     </main>
   </div>
 
-  <!-- Optional Footer -->
+  <!-- Footer -->
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
   </footer>
 
-  <!-- Reference your existing script for fade-in, etc. -->
+  <!-- Script for fade-in, theme toggle, etc. -->
   <script src="script.js"></script>
 </body>
 </html>
