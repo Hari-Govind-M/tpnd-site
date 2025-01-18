@@ -1,9 +1,7 @@
 /* script.js */
 
 (function() {
-  /* =============== */
-  /* Theme Toggle    */
-  /* =============== */
+  /* Theme Toggle */
   const toggleThemeBtn = document.getElementById('toggleTheme');
   const currentTheme = localStorage.getItem('theme');
 
@@ -20,9 +18,7 @@
     }
   });
 
-  /* ===================== */
-  /* Scroll Progress Bar   */
-  /* ===================== */
+  /* Scroll Progress Bar */
   const scrollProgress = document.getElementById('scrollProgress');
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
@@ -31,25 +27,20 @@
     scrollProgress.style.width = scrollPercent + '%';
   });
 
-  /* ===================== */
-  /* Back to Top Button    */
-  /* ===================== */
+  /* Back to Top Button */
   const backToTopBtn = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
-      backToTopBtn.style.display = 'flex'; // show
+      backToTopBtn.style.display = 'flex'; 
     } else {
-      backToTopBtn.style.display = 'none'; // hide
+      backToTopBtn.style.display = 'none'; 
     }
   });
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  /* ========================== */
-  /* Intersection Observer      */
-  /* to fade-in sections        */
-  /* ========================== */
+  /* Intersection Observer for fade-in */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -61,9 +52,7 @@
   const fadeInElements = document.querySelectorAll('.fade-in-up');
   fadeInElements.forEach(el => observer.observe(el));
 
-  /* ===================== */
-  /* Collapsible FAQ       */
-  /* ===================== */
+  /* FAQ Collapsible */
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const questionBtn = item.querySelector('.faq-question');
@@ -72,9 +61,7 @@
     });
   });
 
-  /* ============================ */
-  /* Smooth scrolling for links   */
-  /* ============================ */
+  /* Smooth scrolling for sidebar links */
   const smoothLinks = document.querySelectorAll('.smooth-scroll');
   smoothLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -87,5 +74,4 @@
       }
     });
   });
-
 })();
