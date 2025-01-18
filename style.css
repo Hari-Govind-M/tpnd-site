@@ -1,0 +1,201 @@
+/* style.css */
+
+/* Root variables for easy theme customization */
+:root {
+  --primary-color: #2d5be3;
+  --secondary-color: #959da5;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --light-bg: #f6f8fa;
+  --dark-bg: #262626;
+  --dark-text: #efefef;
+}
+
+/* Dark theme (activated via JavaScript) */
+body.dark-theme {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --light-bg: #2f2f2f;
+  --primary-color: #6fa0ff;
+}
+
+/* Global resets and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1e3da0;
+}
+
+/* Site Header and Navbar */
+.site-header {
+  background-color: var(--light-bg);
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links li a {
+  padding: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Toggle Theme Icon */
+.toggle-theme {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.toggle-theme svg circle {
+  fill: var(--primary-color);
+  transition: fill 0.3s ease;
+}
+body.dark-theme .toggle-theme svg circle {
+  fill: #ffcf33;
+}
+
+/* Mobile Navigation */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background-color: var(--primary-color);
+  transition: all 0.3s;
+}
+
+/* Main Content */
+.main-content {
+  padding: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2,
+.section h3,
+.section h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.cta-button:hover {
+  background-color: #1e3da0;
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.faq-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--light-bg);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--light-bg);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 1rem;
+  }
+  .navbar-links.show {
+    transform: translateX(0%);
+  }
+  .navbar-toggle {
+    display: block;
+  }
+}
