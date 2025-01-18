@@ -1,6 +1,6 @@
 /* style.css */
 
-/* Root variables for easy theme customization */
+/* Root variables */
 :root {
   --primary-color: #2d5be3;
   --secondary-color: #959da5;
@@ -11,7 +11,7 @@
   --dark-text: #efefef;
 }
 
-/* Dark theme (activated via JavaScript) */
+/* Dark theme toggling */
 body.dark-theme {
   --bg-color: var(--dark-bg);
   --text-color: var(--dark-text);
@@ -42,18 +42,24 @@ a:hover {
   color: #1e3da0;
 }
 
-/* HEADER & NAVBAR (unchanged) */
+/* ====================== */
+/* FIXED TOP NAVBAR      */
+/* ====================== */
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--light-bg);
   border-bottom: 1px solid #ddd;
-  padding: 0.5rem 1rem;
+  z-index: 9999; /* keep it on top */
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-logo {
@@ -113,12 +119,12 @@ body.dark-theme .toggle-theme svg circle {
   transition: all 0.3s;
 }
 
-/* ============================= */
-/* NEW: LEFT SIDEBAR STYLES     */
-/* ============================= */
+/* ==================== */
+/* FIXED LEFT SIDEBAR  */
+/* ==================== */
 .sidebar {
   position: fixed;
-  top: 60px; /* sits under the header */
+  top: 60px; /* below the navbar (height ~ 60px) */
   left: 0;
   width: 200px;
   height: calc(100% - 60px);
@@ -126,6 +132,7 @@ body.dark-theme .toggle-theme svg circle {
   border-right: 1px solid #ddd;
   padding: 1rem;
   overflow-y: auto;
+  z-index: 9998; /* just under the navbar */
 }
 
 .sidebar h2 {
@@ -158,26 +165,19 @@ body.dark-theme .toggle-theme svg circle {
   color: #fff;
 }
 
-/* SHIFT MAIN CONTENT RIGHT TO AVOID OVERLAP */
-.main-content {
-  margin-left: 220px; /* slightly bigger than sidebar width for spacing */
-  padding: 1rem;
-  max-width: 960px;
-}
-
-/* ============================= */
-/* NEW: RIGHT-SIDE BOX          */
-/* ============================= */
+/* ============================== */
+/* "How my day as a PTC" BOX     */
+/* ============================== */
 .ptc-day-box {
   position: fixed;
-  top: 200px;  /* adjust as needed */
-  right: 10px; /* near the viewport edge */
+  top: 70px;   /* slightly below the navbar */
+  right: 20px; /* near the viewport edge */
   background-color: var(--light-bg);
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   text-align: center;
-  z-index: 999; /* ensure it floats on top */
+  z-index: 9998; /* ensure it floats above sidebar background but below navbar */
 }
 
 .ptc-day-link {
@@ -194,23 +194,37 @@ body.dark-theme .toggle-theme svg circle {
   color: #fff;
 }
 
-/* MAIN CONTENT & OTHER CLASSES (UNMODIFIED) */
+/* ========================== */
+/* MAIN WRAPPER + CONTENT    */
+/* ========================== */
+.main-wrapper {
+  /* Enough top margin to clear the fixed navbar */
+  margin-top: 60px;
+  /* Enough left margin to clear the fixed sidebar */
+  margin-left: 200px;
+  min-height: 100vh; /* ensures full page coverage */
+}
+
+/* The actual content container, horizontally centered */
+.main-content {
+  max-width: 900px; 
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .hero {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
 .hero h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .hero p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
-
 .cta-button {
   display: inline-block;
   background-color: var(--primary-color);
@@ -226,7 +240,6 @@ body.dark-theme .toggle-theme svg circle {
 .section {
   margin-bottom: 2rem;
 }
-
 .section h2,
 .section h3,
 .section h4 {
@@ -234,14 +247,17 @@ body.dark-theme .toggle-theme svg circle {
   color: var(--primary-color);
 }
 
+/* FOOTER */
 .site-footer {
   background-color: var(--light-bg);
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #ddd;
-  margin-top: 2rem;
 }
 
+/* =============== */
+/* MEDIA QUERIES   */
+/* =============== */
 @media (max-width: 768px) {
   .navbar-links {
     position: absolute;
@@ -261,16 +277,22 @@ body.dark-theme .toggle-theme svg circle {
     display: block;
   }
 
-  /* Hide the fixed sidebar or adjust it for mobile */
+  /* Make sidebar flow normally on mobile */
   .sidebar {
     position: static;
     width: 100%;
     height: auto;
     border-right: none;
+    top: auto;
   }
-  .main-content {
+
+  /* .main-wrapper no longer offsets left for sidebar */
+  .main-wrapper {
     margin-left: 0;
+    margin-top: 100px; /* a bit more top margin to accommodate expanded nav if needed */
   }
+
+  /* "How my day..." box can float or go static */
   .ptc-day-box {
     position: static;
     margin: 1rem auto;
