@@ -1,26 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Azure Infrastructure</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Modern Work</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="">
-  <header class="site-header">
-    <!-- same navbar as other pages, or keep minimal for now -->
-    <nav class="navbar">
-      <div class="navbar-logo">TPnD</div>
-      <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+<body>
 
-  <main class="main-content">
-    <h1>Azure Infrastructure</h1>
-    <p>Placeholder page. Content coming soon...</p>
-  </main>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <!-- Home icon above solution areas -->
+    <div class="home-icon" style="margin-bottom: 1rem;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" fill="var(--primary-color)" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+
+    <h2>Solution Areas</h2>
+    <ul class="solution-areas">
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
+    </ul>
+  </aside>
+
+  <!-- Top-right Theme Toggle & PTC Link -->
+  <div class="top-right-container">
+    <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+      <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+    </div>
+    <div class="ptc-day-box">
+      <a href="my-day-as-a-ptc.html" class="ptc-day-link">How my day as a PTC looks</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <main class="main-content">
+
+      <!-- Centered Hero -->
+      <section class="section fade-in-up" style="text-align: center;">
+        <h1>Modern Work: Empower Teams, Accelerate Productivity, and Drive Innovation</h1>
+        <h4>Harness Microsoft 365, Teams, and AI to Transform Collaboration</h4>
+      </section>
+
+      <!-- Intro Paragraphs -->
+      <section class="section fade-in-up">
+        <p>As organizations continue adapting to hybrid and remote work, Modern Work solutions from Microsoft have become vital. From Microsoft 365 productivity apps to AI-driven experiences with Microsoft Copilot and robust collaboration tools like Microsoft Teams, these solutions help teams connect, collaborate, and innovate—anytime, anywhere.</p>
+
+        <p>Yet, implementing Modern Work solutions requires technical know-how and strategic alignment to ensure smooth adoption, data security, and high user satisfaction. That’s where the Technical Presales and Deployment (TPD) team comes in. We provide hands-on guidance and best practices to help you plan, build, sell, and grow Modern Work implementations—so you can deliver seamless, integrated collaboration experiences to your customers.</p>
+      </section>
+
+      <!-- Why Modern Work => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Why Modern Work?</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Improved Productivity &amp; Collaboration</strong>
+            <p style="margin-top: 0.5rem;">
+              Tools like Microsoft Teams, SharePoint Online, and Microsoft 365 Copilot streamline communication, file sharing, and knowledge management, enabling teams to work more effectively.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Anywhere, Anytime Access</strong>
+            <p style="margin-top: 0.5rem;">
+              A cloud-based environment ensures users can securely access email, files, and apps from any location or device.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>AI-Driven Insights &amp; Automation</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft Copilot and Viva Insights use AI to reduce manual tasks, surface critical information, and promote employee well-being.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Secure, Compliant, and Governed</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft 365 Archive, Microsoft 365 Backup, and features like Microsoft 365 Lighthouse provide enterprise-grade security and compliance across multiple tenants.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Enhanced Meeting &amp; Communication Experiences</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft Teams Meetings with Teams Premium provide advanced meeting features, while Teams Phone merges telephony capabilities into the Teams hub.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Innovative Employee Experiences</strong>
+            <p style="margin-top: 0.5rem;">
+              Microsoft Viva modules (Connections, Goals, Learning, Insights, Engage, Topics, Pulse, Glint) deliver a holistic approach to employee engagement, well-being, and career growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modern Work Services & Solutions => 4x2 table -->
+      <section class="section fade-in-up">
+        <h2>Modern Work Services &amp; Solutions</h2>
+        <p>Below is a snapshot of the Microsoft technologies that can transform your customers’ workplace:</p>
+
+        <div class="table-container" style="margin-top: 1rem;">
+          <table class="simple-table">
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Core Microsoft 365 Services</strong><br/>
+                <em>Exchange Online, SharePoint Online, Project Online, Microsoft 365 Copilot, Microsoft 365 Lighthouse, Microsoft Syntex, Backup, Archive</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Collaboration &amp; Communication</strong><br/>
+                <em>Microsoft Teams (Meetings, Phone, Premium, Platform, Custom Apps), Viva Connections, Viva Engage</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Employee Experience &amp; AI</strong><br/>
+                <em>Microsoft Viva (Glint, Goals, Learning, Topics, Pulse, Insights), Microsoft Copilot</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Security &amp; Multi-Tenant Management</strong><br/>
+                <em>Microsoft 365 Lighthouse, advanced tenant management, cross-customer oversight</em>
+              </td>
+            </tr>
+            <tr>
+              <!-- Additional row if you want 4x2 layout (8 total cells) -->
+              <td style="vertical-align: top;">
+                <strong>Teams Meetings &amp; Premium</strong><br/>
+                <em>Enhanced meeting features, intelligent recaps, advanced scheduling</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Teams Phone</strong><br/>
+                <em>Cloud-based telephony merged into the Teams hub</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>SharePoint Online</strong><br/>
+                <em>Document collaboration, intranet, and file management for modern workplaces</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Microsoft 365 Archive &amp; Backup</strong><br/>
+                <em>Keep data secure, compliant, and easily retrievable across multiple tenants</em>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>Whether you’re rolling out a custom Teams app, enabling Teams Phone for global calling, or enhancing productivity with Microsoft 365 Copilot, you can rely on the TPD team for presales and deployment guidance.</p>
+      </section>
+
+      <!-- Common Modern Work Challenges => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Common Modern Work Challenges &amp; How TPD Helps</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <!-- Challenge 1 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>1. Closing Deals for Microsoft 365 or Teams Upgrades</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A customer uses an older Office on-prem solution, worried about migrating to the cloud.<br/>
+              <strong>TPD Support</strong>: Technical demos of Teams collaboration, Copilot AI benefits, plus cost optimization and best practices for adoption.
+            </p>
+          </div>
+          <!-- Challenge 2 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>2. Enabling Hybrid Work with Advanced Meeting &amp; Calling</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A global enterprise wants to replace PBX with Teams Phone.<br/>
+              <strong>TPD Support</strong>: Advise on network optimization, advanced Teams Premium features, plus integration with direct routing or third-party calling plans.
+            </p>
+          </div>
+          <!-- Challenge 3 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>3. Streamlining Multi-Tenant Management</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: An MSP handles multiple Microsoft 365 environments, needing consistent security across tenants.<br/>
+              <strong>TPD Support</strong>: Introduce Microsoft 365 Lighthouse for unified oversight, backup solutions for compliance, policy enforcement strategies.
+            </p>
+          </div>
+          <!-- Challenge 4 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>4. Driving Employee Engagement &amp; Well-Being</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A professional services firm faces high turnover, low engagement.<br/>
+              <strong>TPD Support</strong>: Deploy Viva Insights, Viva Engage, and Viva Goals for sentiment tracking, aligned objectives, and improved communication.
+            </p>
+          </div>
+          <!-- Challenge 5 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>5. Innovating with AI &amp; Custom Teams Apps</strong>
+            <p style="margin-top: 0.5rem;">
+              <em>Scenario</em>: A healthcare provider needs a custom Teams app with Copilot integration.<br/>
+              <strong>TPD Support</strong>: Guide solution architecture, AI compliance, and proof-of-concept validation for performance and UX.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TPD Engagement Model for Modern Work => 2x2 table -->
+      <section class="section fade-in-up">
+        <h2>TPD Engagement Model for Modern Work</h2>
+        <div class="table-container">
+          <table class="simple-table two-by-two">
+            <tr>
+              <td>
+                <h3 style="text-align: center;">1. Plan &amp; Envision</h3>
+                <p><strong>Define Success Criteria</strong>: Identify key drivers—enhanced collaboration, secure comms, or AI-driven insights.</p>
+                <p><strong>Technical Readiness &amp; Licensing</strong>: Decide licensing tiers (E3/E5, Teams Phone, Teams Premium), handle multi-tenant needs.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">2. Build &amp; Configure</h3>
+                <p><strong>Architecture &amp; Setup</strong>: Configure Exchange Online, SharePoint, Teams, etc.</p>
+                <p><strong>Security &amp; Compliance</strong>: Data governance, archiving with Microsoft 365 Archive, advanced threat protection.</p>
+                <p><strong>Integration &amp; Customization</strong>: Extend M365 with LOB apps in Teams, use Copilot/Syntex to automate tasks.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 style="text-align: center;">3. Sell &amp; Adopt</h3>
+                <p><strong>Technical Presales</strong>: TPD demos for Teams, Copilot, Viva experiences.</p>
+                <p><strong>Objection Handling &amp; ROI</strong>: Tackle cost/security concerns, show real-world ROI.</p>
+                <p><strong>Change Management &amp; Adoption</strong>: Training, user onboarding, communication strategies.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">4. Grow &amp; Optimize</h3>
+                <p><strong>Post-Deployment Checkups</strong>: Monitor usage, refine strategies, gather feedback.</p>
+                <p><strong>Adding Viva &amp; AI Enhancements</strong>: Deploy more Viva modules, explore deeper AI with Copilot.</p>
+                <p><strong>Scaling Multi-Tenant Management</strong>: For MSPs, leverage M365 Lighthouse to standardize security and simplify admin across customers.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hypothetical Success Stories => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Hypothetical Success Stories</h2>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>1. Engineering Firm Transitions to Hybrid Collaboration</h3>
+          <p><strong>Scenario</strong>: An engineering consultancy with distributed teams wants to reduce travel and streamline file versioning.</p>
+          <p><strong>TPD Involvement</strong>: Configured Teams Meetings with advanced features, introduced SharePoint Online, guided AI with Microsoft 365 Copilot for summaries.</p>
+          <p><strong>Outcome</strong>: 50% travel cost reduction, real-time co-authoring, automated note-taking via Copilot.</p>
+        </div>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>2. Financial Services Firm Deploys Microsoft Viva</h3>
+          <p><strong>Scenario</strong>: A fast-growing financial institution sees low engagement and high turnover.</p>
+          <p><strong>TPD Involvement</strong>: Recommended Viva Connections for intranet, Viva Insights for well-being, and Viva Glint for continuous feedback loops.</p>
+          <p><strong>Outcome</strong>: 20% improvement in employee satisfaction and lower attrition rates.</p>
+        </div>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+          <h3>3. Nonprofit Embraces Teams Phone</h3>
+          <p><strong>Scenario</strong>: Outdated PBX hardware limiting flexibility and incurring high costs.</p>
+          <p><strong>TPD Involvement</strong>: Demonstrated Teams Phone cost savings, guided phone number migrations, configured call queues, ensured high availability.</p>
+          <p><strong>Outcome</strong>: Telephony costs halved, staff gained a modern, cloud-based voice solution.</p>
+        </div>
+      </section>
+
+      <!-- How to Engage TPD => diagram -->
+      <section class="section fade-in-up">
+        <h2>How to Engage TPD for Modern Work</h2>
+        <p><strong>Check Your Partner Benefits</strong><br/>
+        Log in to Partner Center to confirm your affiliation with the Microsoft AI Cloud Partner Program and verify TPD entitlements under Benefits → Technical presales &amp; deployment.</p>
+
+        <div class="diagram-container" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Submit a TPD Services Request
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Collaborate &amp; Execute
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Optimize &amp; Evolve
+          </div>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          Open a request, detailing your Modern Work scenario (Teams Phone, Microsoft 365 Copilot demos, Viva suite adoption, etc.). A TPD consultant responds within two business days to assist with presales demos, architecture reviews, or best-practice deployments. Revisit TPD for expansions into new Viva modules, deeper AI integrations, or multi-tenant oversight via Microsoft 365 Lighthouse.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section fade-in-up">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q1: Can TPD help me with both presales demos and actual deployment guidance?</strong><br/>
+        A: Yes. TPD provides end-to-end technical presales and deployment assistance—from solution envisioning to best practices for production rollout.</p>
+
+        <p><strong>Q2: Do I need an existing Microsoft 365 tenant to work with TPD?</strong><br/>
+        A: If you’re in a presales scenario, TPD can direct you to demo environments or trial tenants. For deployment, you’ll need at least one tenant linked to your partner org or customer.</p>
+
+        <p><strong>Q3: What about ongoing support or break-fix after deployment?</strong><br/>
+        A: TPD is for advisory and deployment, not continuous support. Consider Premier Support or Advanced Support for Partners for production break-fix.</p>
+
+        <p><strong>Q4: How does TPD help accelerate user adoption?</strong><br/>
+        A: TPD consultants share adoption best practices, user onboarding tips, training resources, and communication strategies—crucial for maximizing your Modern Work ROI.</p>
+
+        <p><strong>Q5: Is Microsoft Copilot for Microsoft 365 generally available, or do I need special access?</strong><br/>
+        A: Availability/licensing for Microsoft 365 Copilot may vary by region and partner status. TPD will provide the latest details and enrollment guidance.</p>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section fade-in-up">
+        <h2>Drive Future-Ready Collaboration and Productivity</h2>
+        <p>Modern Work isn’t just about moving email to the cloud or running a video call—it’s a transformative approach to how work gets done. By embracing the full power of Microsoft 365, Teams, Viva, and AI:</p>
+        <ul>
+          <li>Teams become more connected, sharing files and ideas in real time.</li>
+          <li>Organizations gain insights into productivity and engagement.</li>
+          <li>Workflows become simpler, smarter, and more secure.</li>
+        </ul>
+
+        <h3>Ready to Transform Your Workplace?</h3>
+        <ul>
+          <li><strong>Schedule a TPD Consultation</strong> – Let’s discuss your Modern Work challenges and craft a winning strategy.</li>
+          <li><strong>Submit a TPD Services Request</strong> – Already have a plan? Let us know, and we’ll help you execute.</li>
+          <li><strong>Explore Other Solution Areas</strong> – From Data &amp; AI to Business Applications, see how TPD can assist across the Microsoft Cloud ecosystem.</li>
+        </ul>
+
+        <p>Partner with TPD to unlock seamless collaboration, powered by Microsoft’s cutting-edge Modern Work solutions—and help your customers stay productive, engaged, and future-ready. We look forward to guiding you through every stage of your Modern Work journey!</p>
+      </section>
+
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
