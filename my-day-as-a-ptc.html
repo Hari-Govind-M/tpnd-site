@@ -1,182 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A Day in the Life of an Azure Infrastructure PTC</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* Minimal inline additions for the diagram flow; adjust as desired */
-    .diagram-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .diagram-step {
-      position: relative;
-      background-color: var(--light-bg);
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 1rem;
-      color: var(--text-color);
-      width: 100%;
-    }
-    .diagram-step::before {
-      content: "";
-      position: absolute;
-      left: -20px;
-      top: 1rem;
-      width: 8px;
-      height: 8px;
-      background-color: var(--primary-color);
-      border-radius: 50%;
-    }
-    .diagram-step:not(:first-child)::after {
-      content: "";
-      position: absolute;
-      left: -16px;
-      top: -1.5rem;
-      width: 2px;
-      height: 1.5rem;
-      background-color: var(--primary-color);
-    }
-    /* Make the layout narrower for readability if no sidebars are used */
-    .main-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-  </style>
+  <!-- Link to your external CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Scroll progress bar (if your script.js uses it) -->
-  <div id="scrollProgress"></div>
-
-  <!-- No sidebar, no top-right container -->
-
-  <!-- Main Wrapper -->
-  <div class="main-wrapper">
-    <main class="main-content">
-
-      <!-- Centered Main Title -->
-      <h1 style="text-align: center;">A Day in the Life of an Azure Infrastructure PTC</h1>
-
-      <!-- Diagram container with multiple steps -->
-      <div class="diagram-container fade-in-up">
-        
-        <!-- STEP 1 -->
-        <div class="diagram-step">
-          <p>
-            The first few minutes of my workday set the tone for everything. Rather than diving into a crowded inbox, I begin by checking our operational boards. This dashboard reveals my top priorities: new partner consultations, critical follow-ups, performance metrics, and any pending operational items. It helps me prepare mentally for the variety of requests—ranging from NetApp tenant migrations to advanced AI integrations—that might appear in my queue.
-          </p>
-        </div>
-
-        <!-- STEP 2 -->
-        <div class="diagram-step">
-          <p>
-            After gaining a high-level view, I review my emails and finalize plans. I see two critical items: a partner needs guidance on migrating NetApp Files from one tenant to another, and a colleague on the Modern Work team has asked for input on Azure Copilot scenarios for a partner already skilled with Microsoft 365 Copilot. I send concise emails to confirm times for a NetApp Files migration session, ensuring we’re both prepared, and an Azure Copilot alignment call, giving me time to gather relevant architectural best practices.
-          </p>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="diagram-step">
-          <p>
-            During my consultation with the partner, they outline challenges around NetApp Files migration. We discuss best practices, referencing Azure documentation, and confirm prerequisites such as network connectivity. By the end, we not only clarify the NetApp Files plan but also discover a potential security enhancement with Microsoft Sentinel. I note this interest and arrange a follow-up enablement session with our Security PTC.
-          </p>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="diagram-step">
-          <p>
-            Soon afterward, I join a call with a Modern Work colleague and a partner who already excels with Microsoft 365 Copilot. They now want to embed Azure Copilot features into their internal workflow for advanced analytics. We explore synergy between existing Copilot usage and Azure AI services, as well as governance considerations and success factors for a staged rollout. The partner is excited about combining Copilot’s AI-driven assistance with robust Azure services. We schedule a follow-up for deeper architectural mapping.
-          </p>
-        </div>
-
-        <!-- STEP 5 -->
-        <div class="diagram-step">
-          <p>
-            A new request arrives about SAP HANA on-prem to Azure DR—an inherently complex scenario involving replication, data consistency, and high availability. The partner’s detailed documentation helps me form an approach. Recognizing that Data &amp; AI PTC expertise is crucial, I confirm we can collaborate. We never work alone; teamwork often makes or breaks these deployments.
-          </p>
-        </div>
-
-        <!-- STEP 6 -->
-        <div class="diagram-step">
-          <p>
-            Between calls and case reviews, I take a brief moment to see my daughter. Hybrid work enables me to blend personal life into quick, meaningful bursts. Recharged, I return to tackle my afternoon tasks.
-          </p>
-        </div>
-
-        <!-- STEP 7 -->
-        <div class="diagram-step">
-          <p>
-            I make a quick call to our Security PTC, reviewing the NetApp partner’s newfound interest in Sentinel. We schedule a session to assess their current threat monitoring, discuss advanced analytics, and plan next steps. Connecting the dots among Security, Azure Infrastructure, and potential expansions into Data &amp; AI is immensely rewarding.
-          </p>
-        </div>
-
-        <!-- STEP 8 -->
-        <div class="diagram-step">
-          <p>
-            A licensing query then arrives. While licensing typically sits outside TPD’s direct scope, I make sure the partner feels supported by redirecting them to the right resource. This fosters trust and ensures their overall Microsoft experience remains positive.
-          </p>
-        </div>
-
-        <!-- STEP 9 -->
-        <div class="diagram-step">
-          <p>
-            Next, I spend time scoping the SAP HANA DR request in detail, referencing the Cloud Adoption Framework and internal resources. I share preliminary findings with my Data &amp; AI colleague so we can approach our upcoming consultation fully aligned. Being prepared helps us deliver a cohesive solution, saving everyone’s time.
-          </p>
-        </div>
-
-        <!-- STEP 10 -->
-        <div class="diagram-step">
-          <p>
-            In parallel, I hop into a community call as part of our continuous learning culture. We discuss emerging scenarios and advanced solution frameworks that might benefit my partners directly. It’s part of building our collective skill set to better serve partner needs.
-          </p>
-        </div>
-
-        <!-- STEP 11 -->
-        <div class="diagram-step">
-          <p>
-            After that, I reassure the partner with the licensing query that the correct team has been looped in for a seamless hand-off. Even if TPD can’t solve it directly, we maintain accountability to ensure a strong partner experience.
-          </p>
-        </div>
-
-        <!-- STEP 12 -->
-        <div class="diagram-step">
-          <p>
-            Before wrapping up, I check my operational board again. Tomorrow’s schedule includes a Sentinel enablement session for the NetApp partner, a detailed SAP HANA DR consultation, and possible collaboration with Modern Work and Security PTCs for a new financial/government entity scenario. I send last-minute emails, finalize notes, and reflect on the day’s achievements—resolving immediate issues, spotting fresh opportunities, and coordinating across solution areas.
-          </p>
-        </div>
-
-        <!-- STEP 13 -->
-        <div class="diagram-step">
-          <p>
-            Concluding the day, I feel a sense of satisfaction. I’ve navigated tenant migrations, AI expansions, DR discussions, licensing triages, and ongoing skill development—while fitting in time with family. The role is dynamic and ever-evolving, but that’s precisely why being a Partner Technical Consultant is so rewarding. Each challenge builds my expertise and helps partners thrive, all while strengthening our collective community at Microsoft.
-          </p>
-        </div>
-
-        <!-- STEP 14 -->
-        <div class="diagram-step">
-          <p>
-            At day’s end, I see how pivotal our role can be—not just resolving technical barriers but also shaping holistic partner experiences. From connecting relevant experts to designing multi-solution roadmaps, we ensure every engagement yields tangible outcomes that help businesses excel in the cloud. Every day is an adventure, brimming with breakthroughs, learning, and real-world impact—fueling my passion to do it all again tomorrow.
-          </p>
-        </div>
-
+  <!-- Main Content Wrapper -->
+  <div class="main-content">
+    
+    <!-- Main Title -->
+    <h1 class="main-title">A Day in the Life of an Azure Infrastructure PTC</h1>
+    
+    <!-- Diagram Container with Steps -->
+    <div class="diagram-container">
+      
+      <!-- STEP 1 -->
+      <div class="diagram-step">
+        <p>
+          The first few minutes of my workday set the tone for everything. Rather than diving into a crowded inbox, I begin by checking our operational boards. This dashboard reveals my top priorities: new partner consultations, critical follow-ups, performance metrics, and any pending operational items. It helps me prepare mentally for the variety of requests—ranging from NetApp tenant migrations to advanced AI integrations—that might appear in my queue.
+        </p>
       </div>
-      <!-- End of Diagram Container -->
+      
+      <!-- STEP 2 -->
+      <div class="diagram-step">
+        <p>
+          After gaining a high-level view, I review my emails and finalize plans. I immediately see two critical items: a partner needs guidance on migrating NetApp Files from one tenant to another, and a colleague on the Modern Work team has asked for my input on Azure Copilot scenarios for a partner already skilled with Microsoft 365 Copilot. I send concise emails to confirm times for a NetApp Files migration session, ensuring we are both prepared, and an Azure Copilot alignment call, giving me time to gather relevant architectural best practices.
+        </p>
+      </div>
+      
+      <!-- STEP 3 -->
+      <div class="diagram-step">
+        <p>
+          During my consultation with the partner, they outline challenges around NetApp Files migration. We discuss best practices, referencing Azure documentation, and confirm prerequisites such as network connectivity. By the end, we not only clarify the NetApp Files plan but also discover a potential security enhancement with Microsoft Sentinel. I note this interest and arrange a follow-up enablement session with our Security PTC.
+        </p>
+      </div>
+      
+      <!-- STEP 4 -->
+      <div class="diagram-step">
+        <p>
+          Shortly afterward, I join a call with a Modern Work colleague and a partner who already excels with Microsoft 365 Copilot. They now want to embed Azure Copilot features into their internal workflow for advanced analytics. We explore synergy between existing Copilot usage and Azure-based AI services, governance considerations for data flows, and success factors for a smooth, staged rollout. The partner is excited about combining Copilot’s AI-driven assistance with robust Azure services. We schedule a follow-up for deeper architectural mapping.
+        </p>
+      </div>
+      
+      <!-- STEP 5 -->
+      <div class="diagram-step">
+        <p>
+          A new request arrives about SAP HANA on-prem to Azure DR—an inherently complex scenario involving replication, data consistency, and high availability. The partner’s detailed documentation helps me form an approach. Recognizing that Data &amp; AI PTC expertise is crucial, I confirm we can collaborate. We never work alone; teamwork often makes or breaks these deployments.
+        </p>
+      </div>
+      
+      <!-- STEP 6 -->
+      <div class="diagram-step">
+        <p>
+          Between calls and case reviews, I take a brief moment to see my daughter. Hybrid work enables me to blend personal life into quick, meaningful bursts. Recharged, I return to tackle my afternoon tasks.
+        </p>
+      </div>
+      
+      <!-- STEP 7 -->
+      <div class="diagram-step">
+        <p>
+          I make a quick call to our Security PTC, reviewing the NetApp partner’s newfound interest in Sentinel. We schedule a session to assess their threat monitoring approach, discuss advanced analytics, and plan next steps. Connecting the dots among Security, Azure Infrastructure, and potential expansions into Data &amp; AI is immensely rewarding.
+        </p>
+      </div>
+      
+      <!-- STEP 8 -->
+      <div class="diagram-step">
+        <p>
+          A licensing query then arrives. While licensing typically sits outside TPD’s direct scope, I make sure the partner feels supported by redirecting them to the right resource. This fosters trust and ensures their overall Microsoft experience remains positive.
+        </p>
+      </div>
+      
+      <!-- STEP 9 -->
+      <div class="diagram-step">
+        <p>
+          Next, I spend time scoping the SAP HANA DR request in detail, referencing the Cloud Adoption Framework and internal resources. I share preliminary findings with my Data &amp; AI colleague so we can approach our upcoming consultation fully aligned. Being prepared helps us deliver a cohesive solution, saving everyone’s time.
+        </p>
+      </div>
+      
+      <!-- STEP 10 -->
+      <div class="diagram-step">
+        <p>
+          In parallel, I hop into a community call as part of our continuous learning culture. We discuss emerging scenarios and advanced solution frameworks that might benefit my partners directly. It’s part of building our collective skill set to better serve partner needs.
+        </p>
+      </div>
+      
+      <!-- STEP 11 -->
+      <div class="diagram-step">
+        <p>
+          After that, I reassure the partner with the licensing query that the correct team has been looped in for a seamless hand-off. Even if TPD can’t solve it directly, we maintain accountability to ensure a strong partner experience.
+        </p>
+      </div>
+      
+      <!-- STEP 12 -->
+      <div class="diagram-step">
+        <p>
+          Before wrapping up, I check my operational board again. Tomorrow’s schedule includes a Sentinel enablement session for the NetApp partner, a detailed SAP HANA DR consultation, and possible collaboration with Modern Work and Security PTCs for a new financial/government entity scenario. I send last-minute emails, finalize notes, and reflect on the day’s achievements—resolving immediate issues, spotting fresh opportunities, and coordinating across solution areas.
+        </p>
+      </div>
+      
+      <!-- STEP 13 -->
+      <div class="diagram-step">
+        <p>
+          Concluding the day, I feel a sense of satisfaction. I’ve navigated tenant migrations, AI expansions, DR discussions, licensing triages, and ongoing skill development—while fitting in time with family. The role is dynamic and ever-evolving, but that’s precisely why being a Partner Technical Consultant is so rewarding. Each challenge builds my expertise and helps partners thrive, all while strengthening our collective community at Microsoft.
+        </p>
+      </div>
+      
+      <!-- STEP 14 -->
+      <div class="diagram-step">
+        <p>
+          By day’s end, I see how pivotal our role can be—not just resolving technical barriers but also shaping holistic partner experiences. From connecting relevant experts to designing multi-solution roadmaps, we ensure every engagement yields tangible outcomes that help businesses excel in the cloud. Every day is an adventure, brimming with breakthroughs, learning, and real-world impact—fueling my passion to do it all again tomorrow.
+        </p>
+      </div>
 
-    </main>
-  </div>
+    </div><!-- end diagram-container -->
+
+  </div><!-- end main-content -->
 
   <!-- Standard Footer -->
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
   </footer>
 
-  <!-- If you use the same script for fade-in or scroll progress, reference it here -->
-  <script src="script.js"></script>
 </body>
 </html>
