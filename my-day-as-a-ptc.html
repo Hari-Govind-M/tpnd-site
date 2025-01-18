@@ -1,25 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Day as a PTC</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Day in the Life of a PTC</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="navbar-logo">TPnD</div>
-      <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="main-content">
-    <h1>How My Day as a PTC Looks</h1>
-    <p>Placeholder for your upcoming content...</p>
-  </main>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <!-- Home icon above solution areas -->
+    <div class="home-icon" style="margin-bottom: 1rem;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" fill="var(--primary-color)" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+
+    <h2>Solution Areas</h2>
+    <ul class="solution-areas">
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
+    </ul>
+  </aside>
+
+  <!-- Top-right container: We can remove the "How my day as a PTC" link here 
+       since this page is literally that. We’ll just keep the theme toggle. -->
+  <div class="top-right-container">
+    <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+      <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <main class="main-content">
+
+      <!-- Centered Hero Heading -->
+      <section class="section fade-in-up" style="text-align: center;">
+        <h1>A Day in the Life of an Azure Infrastructure PTC</h1>
+      </section>
+
+      <!-- Starting the Day with Focus -->
+      <section class="section fade-in-up">
+        <h2>Starting the Day with Focus</h2>
+        <p>
+          The first few minutes of my workday set the tone for everything. Rather than diving into a crowded inbox, I begin by checking our operational boards. This dashboard reveals my top priorities: new partner consultations, critical follow-ups, performance metrics, and any pending operational items. It helps me prepare mentally for the variety of requests—ranging from NetApp tenant migrations to advanced AI integrations—that might appear in my queue.
+        </p>
+      </section>
+
+      <!-- Reviewing Key Emails & Scheduling -->
+      <section class="section fade-in-up">
+        <h2>Reviewing Key Emails &amp; Scheduling</h2>
+        <p>
+          After gaining a high-level view, I review emails to finalize plans. I immediately spot two critical items:
+        </p>
+        <ul>
+          <li>A partner needs guidance on migrating NetApp Files from one tenant to another.</li>
+          <li>A colleague on the Modern Work team wants my input on Azure Copilot scenarios for a partner already skilled with Microsoft 365 Copilot.</li>
+        </ul>
+        <p>
+          I draft concise emails to confirm meeting times:
+        </p>
+        <ul>
+          <li>A NetApp Files migration session soon, ensuring both the partner and I are prepared for a focused call.</li>
+          <li>An Azure Copilot alignment call later, giving me time to gather relevant architectural guidelines and best practices.</li>
+        </ul>
+      </section>
+
+      <!-- First Consultation: NetApp Files Migration -->
+      <section class="section fade-in-up">
+        <h2>First Consultation: NetApp Files Migration</h2>
+        <p>
+          During our online session, the partner outlines their core challenges: moving NetApp Files seamlessly, maintaining data integrity, and minimizing downtime. I walk them through best practices, reference Azure documentation, and confirm key prerequisites (like network connectivity and identity configurations). By the end of the consultation, we’ve not only clarified the NetApp Files plan but also uncovered a security enhancement opportunity with Microsoft Sentinel. Recognizing the chance to provide additional value, I note their interest and schedule a follow-up enablement session with our Security PTC.
+        </p>
+      </section>
+
+      <!-- Deep Dive into Copilot for Azure -->
+      <section class="section fade-in-up">
+        <h2>Deep Dive into Copilot for Azure</h2>
+        <p>
+          Shortly afterward, I join a call with my Modern Work colleague and a partner already excelling with Microsoft 365 Copilot. They now want to embed Azure Copilot features into their workflow to streamline internal processes and supercharge advanced analytics. We discuss potential synergy between their existing Copilot usage and Azure-based AI services, governance considerations for data flows, and success factors for a smooth, staged rollout. The partner is enthusiastic about combining Copilot’s AI-driven assistance with robust Azure services. We schedule a follow-up for deeper solution architecture mapping.
+        </p>
+      </section>
+
+      <!-- Handling a New SAP HANA DR Request -->
+      <section class="section fade-in-up">
+        <h2>Handling a New SAP HANA DR Request</h2>
+        <p>
+          A notification pings: a partner has submitted a case about SAP HANA DB on-prem to Azure DR. It’s complex, involving replication, data consistency, and high availability. Their request is detailed enough for me to start formulating an approach. I realize our Data &amp; AI PTC expertise will be crucial. Before going further, I confirm with my Data &amp; AI counterpart that we can jointly handle this. Teamwork is essential—none of us work in isolation.
+        </p>
+      </section>
+
+      <!-- Brief Personal Break -->
+      <section class="section fade-in-up">
+        <h2>Brief Personal Break</h2>
+        <p>
+          Between calls and case reviews, I carve out a moment to see my daughter. One perk of a hybrid work environment is the ability to integrate personal life in short, meaningful bursts. This quick break energizes me for the afternoon tasks.
+        </p>
+      </section>
+
+      <!-- Coordinating Sentinel Support -->
+      <section class="section fade-in-up">
+        <h2>Coordinating Sentinel Support</h2>
+        <p>
+          Returning from the break, I make a quick call to our Security PTC about the NetApp partner’s new interest in Sentinel. We confirm a subsequent call to assess their threat monitoring approach, discuss advanced security analytics, and propose next steps. It’s gratifying to connect the dots between different solution areas—Security, Azure Infrastructure, and expansions into Data &amp; AI.
+        </p>
+      </section>
+
+      <!-- Licensing Query & Hand-Off -->
+      <section class="section fade-in-up">
+        <h2>Licensing Query &amp; Hand-Off</h2>
+        <p>
+          While prepping for afternoon sessions, I receive a request about licensing. Although such queries generally fall outside TPD’s direct scope, I ensure the partner feels supported by directing them to the right channel. This fosters trust and ensures the partner’s experience with Microsoft remains positive overall.
+        </p>
+      </section>
+
+      <!-- SAP HANA DR Research & Collaboration -->
+      <section class="section fade-in-up">
+        <h2>SAP HANA DR Research &amp; Collaboration</h2>
+        <p>
+          Next, I dedicate time to scoping the SAP HANA DR request in detail. With thorough documentation from the partner, I can skip guesswork. I cross-reference best practices from the Cloud Adoption Framework (CAF), share preliminary findings with my Data &amp; AI colleague, and align on an approach for our upcoming consultation. Being prepared helps us deliver a cohesive solution and saves everyone’s time.
+        </p>
+      </section>
+
+      <!-- Internal Community Calls & Skill Building -->
+      <section class="section fade-in-up">
+        <h2>Internal Community Calls &amp; Skill Building</h2>
+        <p>
+          In parallel, I hop into a community call—part of our continuous learning culture. We explore new ways to help partners build, sell, and grow with Azure. These sessions often unveil advanced solution frameworks and emerging scenarios that I can directly leverage for my partners.
+        </p>
+      </section>
+
+      <!-- Partner Licensing Follow-Up -->
+      <section class="section fade-in-up">
+        <h2>Partner Licensing Follow-Up</h2>
+        <p>
+          I join a quick call to reassure the partner about their licensing inquiry. I confirm the right team is looped in, ensuring a smooth hand-off. This approach upholds accountability and fosters a strong sense of trust in Microsoft’s overall partner experience.
+        </p>
+      </section>
+
+      <!-- Final Review & Setting up for Tomorrow -->
+      <section class="section fade-in-up">
+        <h2>Final Review &amp; Setting up for Tomorrow</h2>
+        <p>
+          Before concluding, I re-check my operational board for any late requests or high-priority items. My schedule for tomorrow includes:
+        </p>
+        <ul>
+          <li>A Sentinel enablement session with the NetApp partner</li>
+          <li>A detailed SAP HANA DR consultation with my Data &amp; AI colleague</li>
+          <li>Potential cross-collaboration with Modern Work and Security PTCs for a new financial/government entity scenario</li>
+        </ul>
+        <p>
+          I send out final emails, tidy my notes, and reflect on the day’s accomplishments: addressing partner issues, identifying new expansions, and fostering synergy across solution areas.
+        </p>
+      </section>
+
+      <!-- Wrapping Up -->
+      <section class="section fade-in-up">
+        <h2>Wrapping Up</h2>
+        <p>
+          I wrap up feeling satisfied. In one day, I’ve tackled tenant migrations, AI expansions, DR discussions, licensing triages, and continued skill development—while still finding time for my family. It’s a dynamic, ever-evolving role, but that’s what makes being a Partner Technical Consultant so rewarding. Each challenge is a step forward in helping partners succeed, strengthening my own expertise, and building a more collaborative Microsoft community.
+        </p>
+      </section>
+
+      <!-- Final Thoughts -->
+      <section class="section fade-in-up">
+        <h2>Final Thoughts</h2>
+        <p>
+          By the end of each day, I see how pivotal the PTC role is—not just in removing technical blockers, but in crafting holistic partner experiences. From connecting the right experts to shaping multi‐solution roadmaps, we ensure every engagement leads to tangible results and propels the partner’s business in the cloud.
+        </p>
+        <p>
+          Each day is an adventure, full of breakthroughs, continuous learning, and genuine impact. That’s the joy of being an Azure Infrastructure PTC: always ready to do it all again tomorrow, fueled by new opportunities to empower partners and keep forging the future of cloud innovation.
+        </p>
+      </section>
+
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
