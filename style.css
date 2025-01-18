@@ -29,7 +29,21 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7; /* slightly larger line-height for readability */
+}
+
+p {
+  margin-bottom: 1rem; /* extra bottom margin for spacing */
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
@@ -39,6 +53,11 @@ a {
 }
 a:hover {
   color: #1e3da0;
+}
+
+/* Additional class to create spacing between sub-sections */
+.model-spacer {
+  margin-top: 2rem;
 }
 
 /* Scroll Progress Bar */
@@ -170,10 +189,10 @@ body.dark-theme .toggle-theme svg circle {
 .main-wrapper {
   margin-left: 200px; /* offset for sidebar width */
   min-height: 100vh;
-  padding: 0 2rem; /* some side padding for readability */
+  padding: 0 2rem; /* side padding for readability */
 }
 
-/* MAIN CONTENT: No max-width => fill space */
+/* MAIN CONTENT - remove max-width to fill space */
 .main-content {
   margin: 0;
   padding: 1rem 0;
@@ -204,10 +223,10 @@ body.dark-theme .toggle-theme svg circle {
 }
 .hero-overlay h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .hero-overlay p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 1.5rem;
 }
 .cta-button {
@@ -224,7 +243,7 @@ body.dark-theme .toggle-theme svg circle {
 
 /* SECTION FADE-IN ANIMATION */
 .section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* bigger gap between sections */
 }
 .fade-in-up {
   opacity: 0;
@@ -238,7 +257,7 @@ body.dark-theme .toggle-theme svg circle {
 
 /* TABLES */
 .table-container {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   overflow-x: auto;
 }
 .simple-table {
@@ -249,7 +268,7 @@ body.dark-theme .toggle-theme svg circle {
 .simple-table th,
 .simple-table td {
   border: 1px solid #ddd;
-  padding: 0.75rem;
+  padding: 1rem;
 }
 .simple-table th {
   background-color: var(--light-bg);
@@ -269,7 +288,7 @@ body.dark-theme .toggle-theme svg circle {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .diagram-step {
   background-color: var(--light-bg);
@@ -310,7 +329,7 @@ body.dark-theme .toggle-theme svg circle {
   padding: 0;
 }
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 400px;
   padding: 0.5rem 0;
 }
 
