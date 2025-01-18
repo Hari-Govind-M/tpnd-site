@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Navigation (fixed at the top) -->
   <header class="site-header">
     <nav class="navbar">
       <div class="navbar-logo">TPnD</div>
@@ -30,7 +30,7 @@
     </nav>
   </header>
 
-  <!-- Left Sidebar (Solution Areas) -->
+  <!-- Left Sidebar (Solution Areas) - fixed -->
   <aside class="sidebar">
     <h2>Solution Areas</h2>
     <ul class="solution-areas">
@@ -43,69 +43,72 @@
     </ul>
   </aside>
 
-  <!-- Right-Side Box: "How my day as a PTC looks" -->
+  <!-- "How my day as a PTC looks" (fixed near top-right) -->
   <div class="ptc-day-box">
     <a href="my-day-as-a-ptc.html" class="ptc-day-link">How my day as a PTC looks</a>
   </div>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <section class="hero">
-      <h1>Technical Presales and Deployment</h1>
-      <p>Your One-Stop Partner for Success in an AI-driven, cloud-first world.</p>
-      <a href="https://learn.microsoft.com/en-us/partner-center/benefits/technical-benefits" 
-         class="cta-button" 
-         target="_blank"
-         rel="noopener noreferrer">
-        Learn More
-      </a>
-    </section>
+  <!-- Main wrapper that accounts for fixed nav & sidebar -->
+  <div class="main-wrapper">
+    <!-- Actual content container (centered) -->
+    <main class="main-content">
+      <section class="hero">
+        <h1>Technical Presales and Deployment</h1>
+        <p>Your One-Stop Partner for Success in an AI-driven, cloud-first world.</p>
+        <a href="https://learn.microsoft.com/en-us/partner-center/benefits/technical-benefits" 
+           class="cta-button" 
+           target="_blank"
+           rel="noopener noreferrer">
+          Learn More
+        </a>
+      </section>
 
-    <section class="section">
-      <h2>Why TPnD Matters</h2>
-      <p>
-        In today’s <strong>AI-driven, cloud-first</strong> world, you need more than just product 
-        access. You need <em>strategic guidance</em> and a dedicated advisor to help you navigate 
-        complex technical presales, solution design, and rapid deployment. That’s where 
-        <strong>Technical Presales and Deployment (TPnD)</strong> comes in.
-      </p>
-      <p>
-        We are a global Microsoft organization that empowers partners with the resources, 
-        knowledge, and tools to <strong>plan</strong>, <strong>build</strong>, 
-        <strong>sell</strong>, and <strong>grow</strong> high-value solutions.
-      </p>
-    </section>
+      <section class="section">
+        <h2>Why TPnD Matters</h2>
+        <p>
+          In today’s <strong>AI-driven, cloud-first</strong> world, you need more than just product 
+          access. You need <em>strategic guidance</em> and a dedicated advisor to help you navigate 
+          complex technical presales, solution design, and rapid deployment. That’s where 
+          <strong>Technical Presales and Deployment (TPnD)</strong> comes in.
+        </p>
+        <p>
+          We are a global Microsoft organization that empowers partners with the resources, 
+          knowledge, and tools to <strong>plan</strong>, <strong>build</strong>, 
+          <strong>sell</strong>, and <strong>grow</strong> high-value solutions.
+        </p>
+      </section>
 
-    <section class="section">
-      <h2>About Us</h2>
-      <h3>Our Mission</h3>
-      <ul>
-        <li><strong>Empower Partners</strong>: Win deals, deliver impactful deployments, and stand out in a dynamic market.</li>
-        <li><strong>Accelerate Time-to-Market</strong>: Shorten project timelines with AI-driven best practices.</li>
-        <li><strong>Enable Ongoing Innovation</strong>: Focus on knowledge transfer so you can innovate continuously.</li>
-      </ul>
-      <p>
-        Our <strong>Partner Technical Consultants (PTCs)</strong> are experts in Azure, Microsoft 365, 
-        Dynamics 365, Power Platform, AI, and more. They guide you through architecture, proofs 
-        of concept, deployment best practices, and post-deployment optimizations.
-      </p>
-    </section>
+      <section class="section">
+        <h2>About Us</h2>
+        <h3>Our Mission</h3>
+        <ul>
+          <li><strong>Empower Partners</strong>: Win deals, deliver impactful deployments, and stand out in a dynamic market.</li>
+          <li><strong>Accelerate Time-to-Market</strong>: Shorten project timelines with AI-driven best practices.</li>
+          <li><strong>Enable Ongoing Innovation</strong>: Focus on knowledge transfer so you can innovate continuously.</li>
+        </ul>
+        <p>
+          Our <strong>Partner Technical Consultants (PTCs)</strong> are experts in Azure, Microsoft 365, 
+          Dynamics 365, Power Platform, AI, and more. They guide you through architecture, proofs 
+          of concept, deployment best practices, and post-deployment optimizations.
+        </p>
+      </section>
 
-    <section class="section">
-      <h2>Eligibility & Benefits</h2>
-      <p>
-        TPnD benefits are available to Microsoft partners in the 
-        <strong>Microsoft AI Cloud Partner Program</strong>, including Solutions Partner 
-        designations, Legacy Gold/Silver status, and Action Pack. If you’re an eligible partner, 
-        you can request <em>Partner Advisory Hours</em> in <strong>Partner Center</strong>.
-      </p>
-      <p>
-        Check your advisory hours allotment in Partner Center, and if you see 
-        “Looks like you don’t have any benefits yet,” confirm you signed in with the 
-        correct account or check your membership status.
-      </p>
-    </section>
-  </main>
+      <section class="section">
+        <h2>Eligibility & Benefits</h2>
+        <p>
+          TPnD benefits are available to Microsoft partners in the 
+          <strong>Microsoft AI Cloud Partner Program</strong>, including Solutions Partner 
+          designations, Legacy Gold/Silver status, and Action Pack. If you’re an eligible partner, 
+          you can request <em>Partner Advisory Hours</em> in <strong>Partner Center</strong>.
+        </p>
+        <p>
+          Check your advisory hours allotment in Partner Center, and if you see 
+          “Looks like you don’t have any benefits yet,” confirm you signed in with the 
+          correct account or check your membership status.
+        </p>
+      </section>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
