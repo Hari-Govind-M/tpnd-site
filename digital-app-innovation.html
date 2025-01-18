@@ -1,26 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Azure Infrastructure</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Digital & App Innovation on Azure</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="">
-  <header class="site-header">
-    <!-- same navbar as other pages, or keep minimal for now -->
-    <nav class="navbar">
-      <div class="navbar-logo">TPnD</div>
-      <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+<body>
 
-  <main class="main-content">
-    <h1>Azure Infrastructure</h1>
-    <p>Placeholder page. Content coming soon...</p>
-  </main>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <!-- Home icon link above the solution areas -->
+    <div class="home-icon" style="margin-bottom: 1rem;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" fill="var(--primary-color)" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+
+    <h2>Solution Areas</h2>
+    <ul class="solution-areas">
+      <li><a href="azure-infrastructure.html">Azure Infrastructure</a></li>
+      <li><a href="data-ai.html">Data &amp; AI</a></li>
+      <li><a href="digital-app-innovation.html">Digital &amp; App Innovation</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="modern-work.html">Modern Work</a></li>
+      <li><a href="business-apps.html">Business Apps</a></li>
+    </ul>
+  </aside>
+
+  <!-- Top-right Theme Toggle & PTC Day Box -->
+  <div class="top-right-container">
+    <div class="toggle-theme" id="toggleTheme" title="Toggle light/dark theme">
+      <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /></svg>
+    </div>
+    <div class="ptc-day-box">
+      <a href="my-day-as-a-ptc.html" class="ptc-day-link">How my day as a PTC looks</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&uarr;</button>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <main class="main-content">
+
+      <!-- Centered Hero Headings -->
+      <section class="section fade-in-up" style="text-align: center;">
+        <h1>Supercharge Your Digital &amp; App Innovation with Azure</h1>
+        <h4>Build, Modernize, and Publish Cloud Applications Faster with TPD</h4>
+      </section>
+
+      <!-- Intro Paragraphs (verbatim) -->
+      <section class="section fade-in-up">
+        <p>In an era where innovation is the lifeblood of competitiveness, harnessing the Azure platform for application development can be a game-changer. Whether you’re building from scratch, modernizing existing apps, or integrating AI and IoT capabilities, Microsoft’s Digital &amp; App Innovation solutions on Azure offer the tools you need to deliver secure, scalable, and high-performing applications.</p>
+
+        <p>Yet, navigating this robust ecosystem—and delivering on time and within budget—can be challenging. That’s where the Technical Presales and Deployment (TPD) team steps in, providing tailored guidance and best practices to ensure you envision, build, and publish applications that delight users and drive business results. Below, we’ll explore the vast array of Azure services for app innovation, common challenges faced by developers, and how TPD can help you achieve success every step of the way.</p>
+      </section>
+
+      <!-- Why Embrace Digital & App Innovation => 6 bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Why Embrace Digital &amp; App Innovation on Azure?</h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <!-- Bubble 1 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Rapid Development &amp; Deployment</strong><br/>
+            <p style="margin-top: 0.5rem;">
+              Tools like Azure App Services, Azure Functions, and Azure Kubernetes Service (AKS) enable faster builds, continuous integration, and streamlined deployment.
+            </p>
+          </div>
+          <!-- Bubble 2 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Enterprise-Grade Security &amp; Identity</strong><br/>
+            <p style="margin-top: 0.5rem;">
+              Integrate applications with Azure AD for Development, Azure API Management, and various Microsoft Graph features to secure data and control access.
+            </p>
+          </div>
+          <!-- Bubble 3 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Global Scale &amp; Performance</strong><br/>
+            <p style="margin-top: 0.5rem;">
+              Leverage global data centers, Azure CDN, and Azure Front Door to ensure reliable performance and minimize latency for users worldwide.
+            </p>
+          </div>
+          <!-- Bubble 4 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Built-In Observability &amp; Reliability</strong><br/>
+            <p style="margin-top: 0.5rem;">
+              Stay informed with Application Insights, Azure Monitor, and logging/telemetry services that help proactively identify issues and optimize performance.
+            </p>
+          </div>
+          <!-- Bubble 5 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Seamless AI &amp; IoT Integration</strong><br/>
+            <p style="margin-top: 0.5rem;">
+              Infuse intelligence into your apps with Azure Cognitive Services, Azure Communication Services, Azure IoT, or Bot Framework—scaling advanced scenarios with ease.
+            </p>
+          </div>
+          <!-- Bubble 6 -->
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Publish &amp; Monetize on Microsoft’s Marketplace</strong><br/>
+            <p style="margin-top: 0.5rem;">
+              Build once, then reach thousands of potential customers by listing your solution on the Microsoft commercial marketplace.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Azure Services => 3x2 Table -->
+      <section class="section fade-in-up">
+        <h2>Azure Services for Digital &amp; App Innovation</h2>
+        <p>Azure’s Digital &amp; App Innovation portfolio is vast. Here’s a sampling of tools and services that can support your entire application lifecycle:</p>
+
+        <div class="table-container" style="margin-top: 1rem;">
+          <table class="simple-table">
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Development &amp; DevOps</strong><br/>
+                <em>Azure DevOps, GitHub, Azure DevTest Labs</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Application Hosting &amp; Management</strong><br/>
+                <em>Azure App Services, Azure Container Apps, Azure Container Instances, Azure Kubernetes Service (AKS), Azure Red Hat OpenShift</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Integration &amp; Messaging</strong><br/>
+                <em>Azure API Management, Azure Service Bus, Azure Event Grid, Azure Event Hubs, Azure Logic Apps</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <strong>Intelligence &amp; Extended Reality</strong><br/>
+                <em>Azure Cognitive Search, Azure Bot Service, Azure Web PubSub, Azure Digital Twins, Azure IoT, Azure Spatial Anchors</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Observability &amp; Optimization</strong><br/>
+                <em>Application Insights, Azure Monitor, Well-Architected Framework</em>
+              </td>
+              <td style="vertical-align: top;">
+                <strong>Publishing &amp; Monetization</strong><br/>
+                <em>Microsoft Graph API, Commercial Marketplace</em>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Key Challenges => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Key Challenges in Cloud Application Development</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Complex Architectures</strong>
+            <p style="margin-top: 0.5rem;">
+              Modern cloud-native apps often involve microservices, containers, serverless functions, and integrated APIs—making it tough to maintain a cohesive view.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Security &amp; Compliance</strong>
+            <p style="margin-top: 0.5rem;">
+              Safeguarding data and user privacy across global regions, while meeting industry compliance, can be daunting without the right practices.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Continuous Integration &amp; Delivery</strong>
+            <p style="margin-top: 0.5rem;">
+              Setting up robust CI/CD pipelines that automate testing, QA, and deployment can be time-consuming.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Performance &amp; Scaling</strong>
+            <p style="margin-top: 0.5rem;">
+              Predicting usage peaks, ensuring consistent response times, and auto-scaling effectively require deep knowledge of Azure’s compute and networking services.
+            </p>
+          </div>
+          <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; flex: 1; min-width: 250px;">
+            <strong>Marketplace Publishing</strong>
+            <p style="margin-top: 0.5rem;">
+              Creating solutions that pass certification, stand out in a crowded marketplace, and generate revenue demands a strategic go-to-market approach.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How TPD Helps => Plan/Envision, Build/Integrate, Sell/Publish, Grow/Optimize in 2x2 table -->
+      <section class="section fade-in-up">
+        <h2>How TPD Helps You Succeed</h2>
+        <p>The Technical Presales and Deployment team provides targeted support at each stage of your cloud application journey: from envisioning to publishing.</p>
+
+        <div class="table-container">
+          <table class="simple-table two-by-two">
+            <tr>
+              <td>
+                <h3 style="text-align: center;">1. Plan &amp; Envision</h3>
+                <p><strong>Architecture Design &amp; Requirements Gathering</strong><br/>
+                We help you define project scope, choose the right Azure services, and align with best practices from the Azure Architecture Center.</p>
+                <p><strong>Skill &amp; Capability Assessment</strong><br/>
+                Understand your team’s readiness: containerization, DevOps, AI expertise, etc.</p>
+                <p><strong>Licensing &amp; Budget Optimization</strong><br/>
+                Guidance on Azure consumption models, cost management techniques, and partner benefits that can reduce overhead.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">2. Build &amp; Integrate</h3>
+                <p><strong>Proof of Concept (POC) &amp; Prototyping</strong><br/>
+                Test ideas quickly using Azure Container Apps, Azure Functions, or Azure DevOps pipelines.</p>
+                <p><strong>Best Practices for Security &amp; DevOps</strong><br/>
+                Secure your app with Azure AD, protect APIs with Azure API Management, and orchestrate code releases in GitHub or Azure DevOps.</p>
+                <p><strong>AI &amp; IoT Infusion</strong><br/>
+                Need a chatbot using Azure Bot Service or real-time analytics with Azure IoT Hub? We’ll guide you through integrations.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 style="text-align: center;">3. Sell &amp; Publish</h3>
+                <p><strong>Technical Demos &amp; Objection Handling</strong><br/>
+                Craft demos to address customer concerns on compliance, performance, or cost.</p>
+                <p><strong>Co-sell Enablement &amp; Marketplace Guidance</strong><br/>
+                Assistance with listing your app in the commercial marketplace, certification, pricing, promotion, etc.</p>
+                <p><strong>RFP Support &amp; Licensing Q&amp;A</strong><br/>
+                Clarify Azure licensing details and position your solution effectively against competitors.</p>
+              </td>
+              <td>
+                <h3 style="text-align: center;">4. Grow &amp; Optimize</h3>
+                <p><strong>Advanced Monitoring &amp; Observability</strong><br/>
+                Implement best practices for Application Insights and Azure Monitor.</p>
+                <p><strong>Refactoring &amp; Modernization</strong><br/>
+                Evolve a monolith into microservices, incorporate Azure Container Registry, or leverage Azure Spring Cloud.</p>
+                <p><strong>Innovation with AI &amp; Analytics</strong><br/>
+                Explore advanced features like Azure Cognitive Services or Azure Digital Twins. Conduct Well-Architected Reviews for stability.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Hypothetical Success Stories => bubble containers -->
+      <section class="section fade-in-up">
+        <h2>Hypothetical Success Stories</h2>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>1. SaaS Startup Building a Chatbot-Driven Support Platform</h3>
+          <p><strong>Scenario</strong>: A startup wants a user-friendly chatbot with advanced natural language understanding to automate helpdesk queries.</p>
+          <p><strong>TPD Support</strong>: Guided the design using Azure Bot Service and Application Insights for real-time conversation analysis. Created a reference architecture for serverless deployment with Azure Functions.</p>
+          <p><strong>Outcome</strong>: Bot usage soared within weeks, handling 70% of common queries without human intervention. The startup published its support platform in the Microsoft commercial marketplace, expanding reach and revenue streams.</p>
+        </div>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+          <h3>2. Healthcare ISV Modernizing Legacy Medical App</h3>
+          <p><strong>Scenario</strong>: A healthcare software vendor needs to modernize a monolithic patient records app for better scalability and compliance.</p>
+          <p><strong>TPD Support</strong>: Proposed a container-based approach using Azure Kubernetes Service (AKS) and integrated monitoring with Azure Monitor. Implemented secure APIs through Azure API Management and Azure AD for multi-tenant B2B scenarios.</p>
+          <p><strong>Outcome</strong>: Improved patient data access times by 40% and reduced overhead costs by nearly 30%. The new architecture adheres to HIPAA requirements with built-in security best practices.</p>
+        </div>
+
+        <div class="story-bubble" style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem;">
+          <h3>3. Retail Enterprise Deploying IoT for Real-Time Inventory</h3>
+          <p><strong>Scenario</strong>: A large retailer wants to enhance inventory management using RFID sensors and real-time analytics.</p>
+          <p><strong>TPD Support</strong>: Set up Azure IoT Hub, Azure Event Hubs, and Azure Stream Analytics for near real-time insights. Integrated telemetry into a custom dashboard on Azure App Services with Application Insights.</p>
+          <p><strong>Outcome</strong>: Inventory accuracy skyrocketed, reducing stockouts/overstock by 25%. The solution attracted other retail chains, creating new revenue through marketplace listing.</p>
+        </div>
+      </section>
+
+      <!-- How to Engage with TPD => diagram approach -->
+      <section class="section fade-in-up">
+        <h2>How to Engage with TPD</h2>
+
+        <p><strong>Check Your Partner Benefits</strong><br/>
+        Log in to Partner Center and navigate to Benefits → Technical presales &amp; deployment. Ensure your account is associated with the Microsoft AI Cloud Partner Program.</p>
+
+        <div class="diagram-container" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Submit a TPD Request
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Collaborate
+          </div>
+          <span class="diagram-arrow" style="font-size: 2rem; color: var(--primary-color);">&#x2192;</span>
+          <div class="diagram-step" style="background-color: var(--light-bg); border: 1px solid #ddd; border-radius: 4px; padding: 0.75rem 1rem; color: var(--primary-color); font-weight: bold;">
+            Grow &amp; Innovate
+          </div>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          Under Technical presales &amp; deployment, select Partner Advisory Hours (if applicable) and provide your project scope—like “Refactoring a legacy .NET app to serverless,” “Implementing CI/CD for containerized workloads,” or “AI-driven chatbot integration.”  
+          A TPD consultant will follow up to discuss architecture, best practices, and potential pitfalls. Keep leveraging TPD for expansions, marketplace publishing, or advanced AI/IoT scenarios.
+        </p>
+      </section>
+
+      <!-- Aligning with the Microsoft AI Cloud Partner Program -->
+      <section class="section fade-in-up">
+        <h2>Aligning with the Microsoft AI Cloud Partner Program</h2>
+        <p>By being part of the Microsoft AI Cloud Partner Program:</p>
+        <ul>
+          <li>Unlock TPD Services: Tap into advisory hours, presales guidance, and deployment support.</li>
+          <li>Access Exclusive Resources: Leverage partner incentives, co-sell benefits, and specialized training.</li>
+          <li>Elevate Your Competencies: By successfully delivering on Digital &amp; App Innovation, you pave the way to higher partner designations and additional perks.</li>
+        </ul>
+      </section>
+
+      <!-- FAQ (verbatim) -->
+      <section class="section fade-in-up">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q1: Does TPD help with AI or machine learning projects specifically?</strong><br/>
+        A: Absolutely. TPD can advise on integrations with Azure Cognitive Services, Azure Bot Service, or any scenario where AI/ML can enhance your application.</p>
+
+        <p><strong>Q2: I need end-to-end DevOps setup for my app. Can TPD assist?</strong><br/>
+        A: Yes. TPD often provides best practices for CI/CD pipelines in both Azure DevOps and GitHub Actions, ensuring smooth, automated deployments.</p>
+
+        <p><strong>Q3: Is there a limit to how many TPD requests I can raise?</strong><br/>
+        A: It depends on your partner level. Solutions Partners and Legacy Gold/Silver members often have unlimited presales support, while Action Pack or Partner Success Core members may use advisory hours.</p>
+
+        <p><strong>Q4: Can TPD help me publish and monetize my solution on the commercial marketplace?</strong><br/>
+        A: Yes. TPD guides you through certification requirements, co-sell opportunities, and marketplace best practices.</p>
+
+        <p><strong>Q5: I need production support or debugging help at 2 a.m. Is TPD the right option?</strong><br/>
+        A: TPD focuses on presales and deployment guidance, not break-fix or 24/7 support. For that, consider Premier Support, Advanced Support for Partners, or other support channels.</p>
+      </section>
+
+      <!-- Final CTA (verbatim) -->
+      <section class="section fade-in-up">
+        <h2>Ready to Innovate with Confidence?</h2>
+        <p>Whether you’re creating a brand-new SaaS solution or modernizing an existing on-prem app, the Digital &amp; App Innovation portfolio on Azure provides unparalleled flexibility and global scale. And with TPD as your partner, you’ll overcome complexity, leverage best practices, and bring breakthrough ideas to market faster.</p>
+
+        <h3>Take the Next Step</h3>
+        <ul>
+          <li><strong>Schedule a TPD Consultation</strong> – Let’s explore your vision, challenges, and how we can accelerate your roadmap.</li>
+          <li><strong>Submit a TPD Services Request</strong> – Already know what you need? Send us your project details today.</li>
+          <li><strong>Discover Other Solution Areas</strong> – Learn more about Azure Infrastructure, Business Applications, Modern Work, and Data &amp; AI.</li>
+        </ul>
+
+        <p>Join the growing community of partners who trust TPD to help architect, build, and deliver impactful cloud solutions. We look forward to empowering your innovation journey—from the first line of code to global marketplace success!</p>
+      </section>
+
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
