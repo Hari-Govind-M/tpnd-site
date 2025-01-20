@@ -1,19 +1,19 @@
 /****************************************************
- * Root Variables
+ * Root Variables (colors, fonts, etc.)
  ****************************************************/
 :root {
-  --primary-color: #2d5be3;
-  --secondary-color: #959da5;
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --light-bg: #f6f8fa;
-  --dark-bg: #262626;
-  --dark-text: #efefef;
+  --primary-color: #2d5be3;     /* used for lines, dots, highlights */
+  --secondary-color: #959da5;   /* optional accent color */
+  --bg-color: #ffffff;          /* general page background */
+  --text-color: #333333;        /* main text color */
+  --light-bg: #f6f8fa;          /* backgrounds for boxes, steps, sidebars */
+  --dark-bg: #262626;           /* used in dark theme */
+  --dark-text: #efefef;         /* text color in dark theme */
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /****************************************************
- * Dark Theme 
+ * Dark Theme Toggling (if you use body.dark-theme)
  ****************************************************/
 body.dark-theme {
   --bg-color: var(--dark-bg);
@@ -23,19 +23,35 @@ body.dark-theme {
 }
 
 /****************************************************
- * Global Reset & Basic
+ * Global Reset & Basic Elements
  ****************************************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-stack);
   line-height: 1.7;
 }
+
+p {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -100,7 +116,7 @@ a:hover {
 }
 
 /****************************************************
- * top-right container (theme + day link)
+ * Top-right container (theme toggle, PTC link)
  ****************************************************/
 .top-right-container {
   position: fixed;
@@ -122,6 +138,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s ease;
 }
 .toggle-theme:hover {
   background-color: #e5e5e5;
@@ -133,7 +150,6 @@ a:hover {
 body.dark-theme .toggle-theme svg circle {
   fill: #ffcf33;
 }
-
 .ptc-day-box {
   background-color: var(--light-bg);
   border: 1px solid #ddd;
@@ -183,7 +199,7 @@ body.dark-theme .toggle-theme svg circle {
  * Main Wrapper & Content
  ****************************************************/
 .main-wrapper {
-  margin-left: 200px;
+  margin-left: 200px; /* space for sidebar */
   min-height: 100vh;
   padding: 0 2rem;
 }
@@ -193,7 +209,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Hero 
+ * Hero Section (gradient animation, if used)
  ****************************************************/
 .hero {
   position: relative;
@@ -238,7 +254,23 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Table containers
+ * Sections & Fade-in Animations
+ ****************************************************/
+.section {
+  margin-bottom: 3rem;
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/****************************************************
+ * Table Container & Simple Table
  ****************************************************/
 .table-container {
   margin: 1.5rem 0;
@@ -259,17 +291,21 @@ body.dark-theme .toggle-theme svg circle {
   color: var(--primary-color);
   text-align: left;
 }
-.two-by-two td {
-  vertical-align: top;
-  width: 50%;
-}
 .solution-areas-3x2 td {
   vertical-align: top;
   width: 33%;
 }
 
 /****************************************************
- * Diagram for TPD steps (bubble flow)
+ * Two-by-two Table (Plan-Build-Sell-Grow, etc.)
+ ****************************************************/
+.two-by-two td {
+  vertical-align: top;
+  width: 50%;
+}
+
+/****************************************************
+ * "How to Submit" Diagram (Services Request, etc.)
  ****************************************************/
 .diagram-container {
   display: flex;
@@ -324,7 +360,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Footer 
+ * Footer
  ****************************************************/
 .site-footer {
   background-color: var(--light-bg);
@@ -337,83 +373,55 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * MY-DAY-AS-A-PTC PAGE (namespaced for headings)
+ * MY-DAY-AS-A-PTC PAGE: Namespaced Diagram Flow
+ * (Ensures no conflict with existing .diagram-container usage)
  ****************************************************/
-.my-day-ptc-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--light-bg);
-  width: 100%;
-  height: 50px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-.my-day-ptc-header-left,
-.my-day-ptc-header-right {
-  display: flex;
-  align-items: center;
-}
-.my-day-ptc-home-link {
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-weight: bold;
-  padding: 0.3rem;
-  border-radius: 4px;
-}
-.my-day-ptc-home-link:hover {
-  background-color: #e5e5e5;
-}
-.my-day-ptc-toggle-theme {
-  cursor: pointer;
-  width: 36px;
-  height: 36px;
-  background-color: var(--light-bg);
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.2s ease;
-}
-.my-day-ptc-toggle-theme:hover {
-  background-color: #e5e5e5;
-}
-.my-day-ptc-toggle-theme svg circle {
-  fill: var(--primary-color);
-  transition: fill 0.3s ease;
-}
-body.dark-theme .my-day-ptc-toggle-theme svg circle {
-  fill: #ffcf33;
-}
-
-/* Full-width article container */
-.my-day-ptc-article {
-  width: 100%;
+.my-day-ptc {
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 70px; /* offset for the fixed header */
+}
+
+.my-day-ptc .ptc-step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.my-day-ptc .ptc-step {
+  position: relative;
+  background-color: var(--light-bg);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  width: 100%;
   box-sizing: border-box;
+  color: var(--text-color);
 }
-.my-day-ptc-title {
-  text-align: center;
-  margin-bottom: 2rem;
+
+/* Dot at the start of each step */
+.my-day-ptc .ptc-step::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 1rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
 }
-.my-day-ptc-section {
-  margin-bottom: 2rem;
-}
-.my-day-ptc-section h2 {
-  margin-bottom: 1rem;
-}
-.my-day-ptc-section p {
-  margin-bottom: 1rem;
+
+/* Vertical line connecting steps except the first */
+.my-day-ptc .ptc-step:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: -1.5rem;
+  width: 2px;
+  height: 1.5rem;
+  background-color: var(--primary-color);
 }
 
 /****************************************************
@@ -430,16 +438,19 @@ body.dark-theme .my-day-ptc-toggle-theme svg circle {
     margin-left: 0;
     padding: 0 1rem;
   }
+  .top-right-container {
+    position: static;
+    justify-content: center;
+    margin: 1rem auto;
+  }
   .hero {
     height: 40vh;
   }
-  .my-day-ptc-header {
-    height: auto;
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
+  .diagram-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .my-day-ptc-article {
+  .my-day-ptc {
     padding: 1rem;
-    padding-top: 80px;
   }
 }
