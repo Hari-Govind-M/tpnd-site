@@ -1,19 +1,19 @@
 /****************************************************
- * Root Variables (colors, fonts, etc.)
+ * Root Variables
  ****************************************************/
 :root {
-  --primary-color: #2d5be3;     /* used for lines, dots, highlights */
-  --secondary-color: #959da5;   /* optional accent color */
-  --bg-color: #ffffff;          /* general page background */
-  --text-color: #333333;        /* main text color */
-  --light-bg: #f6f8fa;          /* backgrounds for boxes, steps, sidebars */
-  --dark-bg: #262626;           /* used in dark theme */
-  --dark-text: #efefef;         /* text color in dark theme */
+  --primary-color: #2d5be3;
+  --secondary-color: #959da5;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --light-bg: #f6f8fa;
+  --dark-bg: #262626;
+  --dark-text: #efefef;
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /****************************************************
- * Dark Theme Toggling (if you use body.dark-theme)
+ * Dark Theme 
  ****************************************************/
 body.dark-theme {
   --bg-color: var(--dark-bg);
@@ -23,35 +23,38 @@ body.dark-theme {
 }
 
 /****************************************************
- * Global Reset & Basic Elements
+ * Global Reset & Basic
  ****************************************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-stack);
   line-height: 1.7;
 }
-
+/* More spacing for paragraphs */
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
 h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
-
 h3 {
   margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
-
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -72,6 +75,13 @@ a:hover {
   height: 4px;
   background: var(--primary-color);
   z-index: 9999;
+}
+
+/****************************************************
+ * .section - bigger margin for breathing room
+ ****************************************************/
+.section {
+  margin-bottom: 3rem; /* bigger spacing between sections */
 }
 
 /****************************************************
@@ -100,7 +110,7 @@ a:hover {
   list-style: none;
 }
 .solution-areas li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 .solution-areas li a {
   display: inline-block;
@@ -116,7 +126,7 @@ a:hover {
 }
 
 /****************************************************
- * Top-right container (theme toggle, PTC link)
+ * top-right container 
  ****************************************************/
 .top-right-container {
   position: fixed;
@@ -205,11 +215,11 @@ body.dark-theme .toggle-theme svg circle {
 }
 .main-content {
   margin: 0;
-  padding: 1rem 0;
+  padding: 2rem 0; /* more vertical padding */
 }
 
 /****************************************************
- * Hero Section (gradient animation, if used)
+ * Hero 
  ****************************************************/
 .hero {
   position: relative;
@@ -222,7 +232,7 @@ body.dark-theme .toggle-theme svg circle {
   background: linear-gradient(270deg, #2d5be3, #0d2d5e, #3b3c6e);
   background-size: 600% 600%;
   animation: gradientBG 15s ease infinite;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* bigger spacing below hero */
 }
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
@@ -254,26 +264,10 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Sections & Fade-in Animations
- ****************************************************/
-.section {
-  margin-bottom: 3rem;
-}
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in-up.is-visible {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-/****************************************************
- * Table Container & Simple Table
+ * Table containers
  ****************************************************/
 .table-container {
-  margin: 1.5rem 0;
+  margin: 2rem 0; /* bigger spacing around tables */
   overflow-x: auto;
 }
 .simple-table {
@@ -291,21 +285,17 @@ body.dark-theme .toggle-theme svg circle {
   color: var(--primary-color);
   text-align: left;
 }
+.two-by-two td {
+  vertical-align: top;
+  width: 50%;
+}
 .solution-areas-3x2 td {
   vertical-align: top;
   width: 33%;
 }
 
 /****************************************************
- * Two-by-two Table (Plan-Build-Sell-Grow, etc.)
- ****************************************************/
-.two-by-two td {
-  vertical-align: top;
-  width: 50%;
-}
-
-/****************************************************
- * "How to Submit" Diagram (Services Request, etc.)
+ * Diagram for TPD steps (bubble flow)
  ****************************************************/
 .diagram-container {
   display: flex;
@@ -334,7 +324,8 @@ body.dark-theme .toggle-theme svg circle {
  ****************************************************/
 .faq-item {
   border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
+  padding: 1.5rem 0; /* extra spacing for FAQ items */
+  margin-bottom: 1.5rem;
 }
 .faq-question {
   background: none;
@@ -346,7 +337,7 @@ body.dark-theme .toggle-theme svg circle {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 .faq-answer {
   max-height: 0;
@@ -360,68 +351,97 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Footer
+ * Footer 
  ****************************************************/
 .site-footer {
   background-color: var(--light-bg);
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #ddd;
-  margin-top: 2rem;
+  margin-top: 3rem; /* more space above footer */
   font-size: 0.9rem;
   color: #666;
 }
 
 /****************************************************
- * MY-DAY-AS-A-PTC PAGE: Namespaced Diagram Flow
- * (Ensures no conflict with existing .diagram-container usage)
+ * MY-DAY-AS-A-PTC PAGE
  ****************************************************/
-.my-day-ptc {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.my-day-ptc .ptc-step-container {
+.my-day-ptc-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--light-bg);
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
-
-.my-day-ptc .ptc-step {
-  position: relative;
+.my-day-ptc-header-left,
+.my-day-ptc-header-right {
+  display: flex;
+  align-items: center;
+}
+.my-day-ptc-home-link {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: bold;
+  padding: 0.3rem;
+  border-radius: 4px;
+}
+.my-day-ptc-home-link:hover {
+  background-color: #e5e5e5;
+}
+.my-day-ptc-toggle-theme {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
   background-color: var(--light-bg);
   border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+.my-day-ptc-toggle-theme:hover {
+  background-color: #e5e5e5;
+}
+.my-day-ptc-toggle-theme svg circle {
+  fill: var(--primary-color);
+  transition: fill 0.3s ease;
+}
+body.dark-theme .my-day-ptc-toggle-theme svg circle {
+  fill: #ffcf33;
+}
+
+/* Full-width article container */
+.my-day-ptc-article {
   width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 70px; /* offset for the fixed header */
   box-sizing: border-box;
-  color: var(--text-color);
 }
-
-/* Dot at the start of each step */
-.my-day-ptc .ptc-step::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 1rem;
-  width: 8px;
-  height: 8px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
+.my-day-ptc-title {
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
-/* Vertical line connecting steps except the first */
-.my-day-ptc .ptc-step:not(:first-child)::after {
-  content: "";
-  position: absolute;
-  left: -16px;
-  top: -1.5rem;
-  width: 2px;
-  height: 1.5rem;
-  background-color: var(--primary-color);
+.my-day-ptc-section {
+  margin-bottom: 2.5rem; /* extra spacing for day-of-PTC sections */
+}
+.my-day-ptc-section h2 {
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+.my-day-ptc-section p {
+  margin-bottom: 1.5rem;
 }
 
 /****************************************************
@@ -438,19 +458,16 @@ body.dark-theme .toggle-theme svg circle {
     margin-left: 0;
     padding: 0 1rem;
   }
-  .top-right-container {
-    position: static;
-    justify-content: center;
-    margin: 1rem auto;
-  }
   .hero {
     height: 40vh;
   }
-  .diagram-container {
-    flex-direction: column;
-    align-items: flex-start;
+  .my-day-ptc-header {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
   }
-  .my-day-ptc {
+  .my-day-ptc-article {
     padding: 1rem;
+    padding-top: 80px;
   }
 }
