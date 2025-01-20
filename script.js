@@ -1,10 +1,10 @@
 // script.js
 (function() {
-  // Theme toggle
+  // Theme Toggle
   const themeBtn = document.getElementById('toggleTheme');
   if (themeBtn) {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
       document.body.classList.add('dark-theme');
     }
     themeBtn.addEventListener('click', () => {
