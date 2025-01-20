@@ -42,14 +42,8 @@ p {
   margin-bottom: 1rem;
 }
 
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+h1, h2, h3 {
+  margin: 1rem 0;
 }
 
 a {
@@ -62,8 +56,7 @@ a:hover {
 }
 
 /****************************************************
- * Existing site: Scroll Progress Bar, sidebars, etc.
- * (If your pages use them, keep them)
+ * Scroll Progress Bar (if used)
  ****************************************************/
 #scrollProgress {
   position: fixed;
@@ -75,7 +68,65 @@ a:hover {
   z-index: 9999;
 }
 
-/* Just in case you have a sidebar for other pages. */
+/****************************************************
+ * TPD BUBBLE DIAGRAM (Used on index or solution pages)
+ ****************************************************/
+.diagram-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.diagram-step {
+  background-color: var(--light-bg);
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-align: center;
+  min-width: 80px;
+}
+.diagram-arrow {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/****************************************************
+ * FAQ Collapsible
+ ****************************************************/
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.faq-question {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+}
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  padding: 0.5rem 0;
+}
+
+/****************************************************
+ * If your site uses .sidebar, .top-right-container, etc.
+ * Keep them so existing pages remain unaffected
+ ****************************************************/
 .sidebar {
   position: fixed;
   top: 0;
@@ -115,8 +166,7 @@ a:hover {
 }
 
 /****************************************************
- * Possibly existing top-right container?
- * Keep if other pages use them
+ * top-right container, if used on other pages
  ****************************************************/
 .top-right-container {
   position: fixed;
@@ -138,7 +188,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.2s ease;
 }
 .toggle-theme:hover {
   background-color: #e5e5e5;
@@ -152,33 +201,8 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Back to Top Button (if used)
- ****************************************************/
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--light-bg);
-  color: var(--primary-color);
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-#backToTop:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-/****************************************************
- * Main Wrapper & Content for other pages
- * (If your main pages use them)
+ * Potential main-wrapper & main-content 
+ * (Used on solution pages)
  ****************************************************/
 .main-wrapper {
   margin-left: 200px;
@@ -191,52 +215,20 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Hero Section, etc. (existing site usage)
+ * Footer
  ****************************************************/
-.hero {
-  position: relative;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  overflow: hidden;
-  background: linear-gradient(270deg, #2d5be3, #0d2d5e, #3b3c6e);
-  background-size: 600% 600%;
-  animation: gradientBG 15s ease infinite;
-  margin-bottom: 2rem;
-}
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.hero-overlay {
+.site-footer {
+  background-color: var(--light-bg);
   text-align: center;
   padding: 1rem;
-}
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.hero-overlay p {
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
-}
-.cta-button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-.cta-button:hover {
-  background-color: #1e3da0;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 /****************************************************
- * Fade-in Animations (if used by other pages)
+ * Fade-in Animations (if used on solution pages)
  ****************************************************/
 .section {
   margin-bottom: 3rem;
@@ -252,81 +244,9 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Table containers or 2x2 layouts if your other pages use them
+ * MY-DAY-AS-A-PTC PAGE ONLY - Namespaced
  ****************************************************/
-.table-container {
-  margin: 1.5rem 0;
-  overflow-x: auto;
-}
-.simple-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-.simple-table th,
-.simple-table td {
-  border: 1px solid #ddd;
-  padding: 1rem;
-}
-.simple-table th {
-  background-color: var(--light-bg);
-  color: var(--primary-color);
-  text-align: left;
-}
-.two-by-two td {
-  vertical-align: top;
-  width: 50%;
-}
-
-/****************************************************
- * FAQ Collapsible (if used on other pages)
- ****************************************************/
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
-}
-.faq-question {
-  background: none;
-  border: none;
-  outline: none;
-  font: inherit;
-  font-weight: bold;
-  color: var(--primary-color);
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0;
-}
-.faq-item.active .faq-answer {
-  max-height: 400px;
-  padding: 0.5rem 0;
-}
-
-/****************************************************
- * Footer (site-footer)
- ****************************************************/
-.site-footer {
-  background-color: var(--light-bg);
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid #ddd;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/****************************************************
- * Namespaced: .my-day-ptc-header & .my-day-ptc-article
- * so it won't override other pages
- ****************************************************/
-
-/* Top bar for the "my-day-as-a-ptc" page only */
+/* The fixed header at top */
 .my-day-ptc-header {
   position: fixed;
   top: 0;
@@ -360,7 +280,7 @@ body.dark-theme .toggle-theme svg circle {
   background-color: #e5e5e5;
 }
 
-/* The theme toggle on the right for this page specifically */
+/* The theme toggle for this page's header */
 .my-day-ptc-toggle-theme {
   cursor: pointer;
   width: 36px;
@@ -384,13 +304,15 @@ body.dark-theme .my-day-ptc-toggle-theme svg circle {
   fill: #ffcf33;
 }
 
-/* The main article area for day-of-PTC text */
+/* The article container, 100% wide */
 .my-day-ptc-article {
-  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 70px; /* so content is visible below fixed header */
+  padding-top: 70px; /* offset below fixed header */
+  box-sizing: border-box;
 }
+
 .my-day-ptc-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -406,7 +328,7 @@ body.dark-theme .my-day-ptc-toggle-theme svg circle {
 }
 
 /****************************************************
- * Responsive Adjustments
+ * Responsive for the day-of-PTC top bar
  ****************************************************/
 @media (max-width: 768px) {
   .my-day-ptc-header {
