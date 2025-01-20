@@ -1,14 +1,12 @@
 // script.js
 (function() {
-  // Theme Toggle
+  // Theme toggle
   const themeBtn = document.getElementById('toggleTheme');
   if (themeBtn) {
-    // Remember user preference from localStorage if needed:
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('dark-theme');
     }
-
     themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-theme');
       if (document.body.classList.contains('dark-theme')) {
@@ -19,7 +17,7 @@
     });
   }
 
-  // FAQ collapsibles
+  // FAQ collapsible
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
@@ -29,7 +27,7 @@
     });
   });
 
-  // Back-to-top button
+  // Back to Top button
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
@@ -44,7 +42,7 @@
     });
   }
 
-  // Optional: scrollProgress bar
+  // Scroll progress bar
   const scrollProgress = document.getElementById('scrollProgress');
   if (scrollProgress) {
     window.addEventListener('scroll', () => {
