@@ -13,7 +13,7 @@
 }
 
 /****************************************************
- * Dark Theme Toggling
+ * Dark Theme 
  ****************************************************/
 body.dark-theme {
   --bg-color: var(--dark-bg);
@@ -23,25 +23,18 @@ body.dark-theme {
 }
 
 /****************************************************
- * Global Reset & Basic Elements
+ * Global Reset & Basic
  ****************************************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-stack);
   line-height: 1.7;
-}
-p {
-  margin-bottom: 1rem;
-}
-h1, h2, h3 {
-  margin: 1rem 0;
 }
 a {
   color: var(--primary-color);
@@ -66,7 +59,7 @@ a:hover {
 }
 
 /****************************************************
- * Sidebar 
+ * Sidebar
  ****************************************************/
 .sidebar {
   position: fixed;
@@ -107,7 +100,7 @@ a:hover {
 }
 
 /****************************************************
- * top-right container
+ * top-right container (theme + day link)
  ****************************************************/
 .top-right-container {
   position: fixed;
@@ -129,7 +122,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.2s ease;
 }
 .toggle-theme:hover {
   background-color: #e5e5e5;
@@ -141,6 +133,7 @@ a:hover {
 body.dark-theme .toggle-theme svg circle {
   fill: #ffcf33;
 }
+
 .ptc-day-box {
   background-color: var(--light-bg);
   border: 1px solid #ddd;
@@ -190,7 +183,7 @@ body.dark-theme .toggle-theme svg circle {
  * Main Wrapper & Content
  ****************************************************/
 .main-wrapper {
-  margin-left: 200px; 
+  margin-left: 200px;
   min-height: 100vh;
   padding: 0 2rem;
 }
@@ -200,7 +193,7 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * Hero Section
+ * Hero 
  ****************************************************/
 .hero {
   position: relative;
@@ -242,22 +235,6 @@ body.dark-theme .toggle-theme svg circle {
 }
 .cta-button:hover {
   background-color: #1e3da0;
-}
-
-/****************************************************
- * Fade-in Animations
- ****************************************************/
-.section {
-  margin-bottom: 3rem;
-}
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in-up.is-visible {
-  opacity: 1;
-  transform: translateY(0px);
 }
 
 /****************************************************
@@ -360,9 +337,8 @@ body.dark-theme .toggle-theme svg circle {
 }
 
 /****************************************************
- * MY-DAY-AS-A-PTC - wide headings
+ * MY-DAY-AS-A-PTC PAGE (namespaced for headings)
  ****************************************************/
-/* Minimal fixed header for my-day page */
 .my-day-ptc-header {
   position: fixed;
   top: 0;
@@ -395,8 +371,6 @@ body.dark-theme .toggle-theme svg circle {
 .my-day-ptc-home-link:hover {
   background-color: #e5e5e5;
 }
-
-/* custom theme toggle on my-day page */
 .my-day-ptc-toggle-theme {
   cursor: pointer;
   width: 36px;
@@ -420,12 +394,12 @@ body.dark-theme .my-day-ptc-toggle-theme svg circle {
   fill: #ffcf33;
 }
 
-/* The main article area is full-width for headings */
+/* Full-width article container */
 .my-day-ptc-article {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 70px; /* offset below fixed header */
+  padding-top: 70px; /* offset for the fixed header */
   box-sizing: border-box;
 }
 .my-day-ptc-title {
